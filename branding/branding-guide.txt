@@ -1,0 +1,14 @@
+main brand color:
+#c70000
+
+secondary (neutral colors): black #000, white #fff
+
+third color, rarely used for contrast:
+#fad744
+
+Main brand font:
+ROG Lyons Type
+
+Clean fonts used:
+Garet (Regular, Bold)
+Poppins (Regular, Bold)

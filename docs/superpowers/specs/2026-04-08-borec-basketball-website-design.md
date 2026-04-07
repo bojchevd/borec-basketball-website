@@ -51,8 +51,7 @@ This is scoped to the **public website only** — a separate coaches/players app
 ### Typography
 
 - **ROG Lyons Type**: Hero headings, section titles — bold, brand-consistent
-- **Poppins**: Primary body text, UI labels, navigation — clean, readable
-- **Garet**: Secondary/alternative for specific UI elements where a softer feel is needed
+- **Poppins**: All body text, UI labels, navigation — clean, readable (Google Fonts)
 
 ### Logo Usage
 
