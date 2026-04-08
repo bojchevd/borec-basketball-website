@@ -204,21 +204,21 @@ export default async function Home() {
               {/* Season stats teaser */}
               <div className="mt-4 grid grid-cols-3 gap-3">
                 <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 text-center">
-                  <div className="font-heading text-2xl text-brand-red">9</div>
+                  <div className="font-heading text-2xl text-brand-red">15</div>
                   <div className="mt-1 text-[10px] uppercase tracking-wider text-white/30">
                     {t.home.wins}
                   </div>
                 </div>
                 <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 text-center">
-                  <div className="font-heading text-2xl text-white">1</div>
+                  <div className="font-heading text-2xl text-white">5</div>
                   <div className="mt-1 text-[10px] uppercase tracking-wider text-white/30">
                     {t.home.loss}
                   </div>
                 </div>
                 <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 text-center">
-                  <div className="font-heading text-2xl text-brand-gold">#1</div>
+                  <div className="font-heading text-2xl text-brand-gold">#4</div>
                   <div className="mt-1 text-[10px] uppercase tracking-wider text-white/30">
-                    Group B
+                    Позиција
                   </div>
                 </div>
               </div>
