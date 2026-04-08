@@ -9,7 +9,13 @@ export function NewsCard({ post }: { post: Post }) {
     <Link href={`/news/${post.slug.current}`} className="group block">
       <div className="overflow-hidden rounded-lg bg-white/5">
         <div className="relative aspect-[16/9] overflow-hidden">
-          <Image src={urlFor(post.coverImage).width(600).height(340).url()} alt={post.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+          {post.coverImage ? (
+            <Image src={urlFor(post.coverImage).width(600).height(340).url()} alt={post.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+          ) : (
+            <div className="flex h-full items-center justify-center bg-gradient-to-br from-brand-red/20 to-brand-black">
+              <span className="font-heading text-4xl text-white/10">BB</span>
+            </div>
+          )}
         </div>
         <div className="p-4">
           <p className="text-xs font-medium uppercase tracking-wider text-brand-red">{formatPostDate(post.publishedAt)}</p>
