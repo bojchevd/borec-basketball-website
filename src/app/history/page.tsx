@@ -251,7 +251,7 @@ export default function HistoryPage() {
           <div className="mt-6 grid grid-cols-3 gap-4 text-center">
             {[
               { stat: "19.2", label: "просечни поени\n(Derrick Ellis)" },
-              { stat: "9–1", label: "wins/losses\nво Група Б" },
+              { stat: "9–1", label: "победи/порази\nво Група Б" },
               { stat: "#1", label: "место во\nГрупа Б" },
             ].map(({ stat, label }) => (
               <div

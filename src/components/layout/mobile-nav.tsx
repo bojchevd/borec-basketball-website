@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "./language-switcher";
 
 interface MobileNavProps {
   links: { href: string; label: string }[];
@@ -34,6 +35,9 @@ export function MobileNav({ links }: MobileNavProps) {
             </Link>
           ))}
         </nav>
+        <div className="mt-6">
+          <LanguageSwitcher />
+        </div>
       </SheetContent>
     </Sheet>
   );

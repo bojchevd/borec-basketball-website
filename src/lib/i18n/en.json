@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "news": "News",
+    "schedule": "Schedule",
+    "roster": "Roster",
+    "academy": "Academy",
+    "minibasket": "Minibasket",
+    "history": "History",
+    "sponsors": "Sponsors",
+    "contact": "Contact"
+  },
+  "home": {
+    "established": "Est. 2009 · Veles",
+    "league": "First League · Group B · Season 2025/26",
+    "schedule": "Schedule",
+    "roster": "Roster",
+    "nextGame": "Next Game",
+    "fullSchedule": "Full Schedule",
+    "wins": "Wins",
+    "loss": "Loss",
+    "upcomingGames": "Upcoming",
+    "upcomingGamesAccent": "Games",
+    "latestNews": "Latest",
+    "latestNewsAccent": "News",
+    "allNews": "All News",
+    "ourPrograms": "Our",
+    "ourProgramsAccent": "Programs",
+    "basketballAcademy": "Basketball\nAcademy",
+    "academyDesc": "Competitive training for serious players",
+    "miniBasket": "Mini\nBasket",
+    "miniBasketDesc": "Basketball for the youngest players",
+    "ourSponsors": "Our Sponsors"
+  },
+  "schedule": {
+    "title": "Schedule",
+    "upcoming": "Upcoming Games",
+    "results": "Results",
+    "noUpcoming": "No upcoming games scheduled."
+  },
+  "news": {
+    "title": "News",
+    "noNews": "No news posts yet.",
+    "backToNews": "← Back to News"
+  },
+  "roster": {
+    "title": "Roster",
+    "coachingStaff": "Coaching Staff"
+  },
+  "history": {
+    "title": "History"
+  },
+  "academy": {
+    "title": "Basketball",
+    "titleAccent": "Academy",
+    "subtitle": "Competitive training for players looking to take their game to the next level.",
+    "location": "Borec Basketball · Veles",
+    "ageGroups": "Age Groups",
+    "trainingPhilosophy": "Training Philosophy",
+    "howToJoin": "How to Join",
+    "contactUs": "Contact Us",
+    "pathway": "Development Pathway",
+    "minibasketToSenior": "Minibasket → Academy → Senior Team"
+  },
+  "minibasket": {
+    "title": "Mini",
+    "titleAccent": "basket",
+    "subtitle": "Basketball for the youngest — building fundamentals, teamwork, and love for the game.",
+    "ages": "Ages 7-12",
+    "scheduleLabel": "Every Tuesday and Thursday",
+    "location": "Vasil Glavinov Hall, Veles",
+    "whatToExpect": "What to Expect",
+    "benefits": "Benefits",
+    "motorSkills": "Motor Skills",
+    "coordination": "Coordination & Balance",
+    "teamwork": "Teamwork",
+    "confidence": "Confidence",
+    "activeLifestyle": "Active Lifestyle",
+    "fun": "Fun Always",
+    "forParents": "For Parents",
+    "readyToJoin": "Ready to Join?",
+    "contactUs": "Contact Us",
+    "viewAcademy": "View Academy →"
+  },
+  "sponsors": {
+    "title": "Our",
+    "titleAccent": "Sponsors",
+    "becomeSponsor": "Become a Sponsor",
+    "becomeSponsorDesc": "Interested in supporting Borec Basketball? Get in touch.",
+    "contactUs": "Contact Us"
+  },
+  "contact": {
+    "title": "Contact",
+    "locationLabel": "Location",
+    "locationValue": "Veles, North Macedonia",
+    "emailLabel": "Email",
+    "socialLabel": "Social",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Your message...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "sent": "Message Sent!",
+      "sentDesc": "We'll get back to you soon.",
+      "error": "Failed to send. Please try again or email us directly."
+    }
+  },
+  "notFound": {
+    "title": "You Missed",
+    "titleAccent": "The Shot",
+    "description": "The page you're looking for didn't make the play.\nNo worries — the game's still on elsewhere.",
+    "goHome": "Get Me Home"
+  },
+  "footer": {
+    "links": "Links",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved."
+  },
+  "game": {
+    "home": "HOME",
+    "away": "AWAY",
+    "win": "WIN",
+    "loss": "LOSS"
+  },
+  "marquee1": "BOREC BASKETBALL · VELES · БОРЕЦ БАСКЕТ",
+  "marquee2": "ACADEMY · MINIBASKET · JOIN US"
+}

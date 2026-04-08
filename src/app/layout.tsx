@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { rogLyonsType, poppins } from "@/lib/fonts";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { I18nProvider } from "@/lib/i18n/provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -24,9 +25,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="mk" className={`${rogLyonsType.variable} ${poppins.variable}`}>
       <body>
-        <Navbar />
-        <main className="pt-16">{children}</main>
-        <Footer />
+        <I18nProvider>
+          <Navbar />
+          <main className="pt-16">{children}</main>
+          <Footer />
+        </I18nProvider>
       </body>
     </html>
   );

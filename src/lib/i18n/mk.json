@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "news": "Вести",
+    "schedule": "Распоред",
+    "roster": "Состав",
+    "academy": "Академија",
+    "minibasket": "Минибаскет",
+    "history": "Историја",
+    "sponsors": "Спонзори",
+    "contact": "Контакт"
+  },
+  "home": {
+    "established": "Осн. 2009 · Велес",
+    "league": "Прва Лига · Сезона 2025/26",
+    "schedule": "Распоред",
+    "roster": "Состав",
+    "nextGame": "Следен натпревар",
+    "fullSchedule": "Целосен распоред",
+    "wins": "Победи",
+    "loss": "Пораз",
+    "upcomingGames": "Претстојни",
+    "upcomingGamesAccent": "Натпревари",
+    "latestNews": "Последни",
+    "latestNewsAccent": "Вести",
+    "allNews": "Сите вести",
+    "ourPrograms": "Наши",
+    "ourProgramsAccent": "Програми",
+    "basketballAcademy": "Кошаркарска\nАкадемија",
+    "academyDesc": "Професионален тренинг за сериозни играчи",
+    "miniBasket": "Мини\nБаскет",
+    "miniBasketDesc": "Кошарка за најмладите играчи",
+    "ourSponsors": "Наши спонзори"
+  },
+  "schedule": {
+    "title": "Распоред",
+    "upcoming": "Следни натпревари",
+    "results": "Резултати",
+    "noUpcoming": "Нема закажани натпревари."
+  },
+  "news": {
+    "title": "Вести",
+    "noNews": "Сеуште нема објави.",
+    "backToNews": "← Назад кон вести"
+  },
+  "roster": {
+    "title": "Состав",
+    "coachingStaff": "Стручен штаб"
+  },
+  "history": {
+    "title": "Историја"
+  },
+  "academy": {
+    "title": "Кошаркарска",
+    "titleAccent": "Академија",
+    "subtitle": "Професионален тренинг за играчи кои сакаат да го подигнат нивото на својата игра.",
+    "location": "Борец Баскет · Велес",
+    "ageGroups": "Возрасни групи",
+    "trainingPhilosophy": "Филозофија на тренинг",
+    "howToJoin": "Како да се приклучите",
+    "contactUs": "Контактирајте не",
+    "pathway": "Патека на развој",
+    "minibasketToSenior": "Минибаскет → Академија → Сениорски тим"
+  },
+  "minibasket": {
+    "title": "Мини",
+    "titleAccent": "баскет",
+    "subtitle": "Кошарка за најмладите — градење основи, тимска работа и љубов кон играта.",
+    "ages": "Возраст 7-12",
+    "scheduleLabel": "Секој вторник и четврток",
+    "location": "Сала Васил Главинов, Велес",
+    "whatToExpect": "Што да очекувате",
+    "benefits": "Придобивки",
+    "motorSkills": "Моторички вештини",
+    "coordination": "Координација и баланс",
+    "teamwork": "Тимска работа",
+    "confidence": "Самодоверба",
+    "activeLifestyle": "Активен начин на живот",
+    "fun": "Забава секогаш",
+    "forParents": "За родителите",
+    "readyToJoin": "Подготвени да се приклучите?",
+    "contactUs": "Контактирајте не",
+    "viewAcademy": "Види Академија →"
+  },
+  "sponsors": {
+    "title": "Наши",
+    "titleAccent": "Спонзори",
+    "becomeSponsor": "Станете спонзор",
+    "becomeSponsorDesc": "Заинтересирани да го поддржите Борец Баскет? Контактирајте не.",
+    "contactUs": "Контактирајте не"
+  },
+  "contact": {
+    "title": "Контакт",
+    "locationLabel": "Локација",
+    "locationValue": "Велес, Северна Македонија",
+    "emailLabel": "Е-пошта",
+    "socialLabel": "Социјални мрежи",
+    "form": {
+      "name": "Име",
+      "namePlaceholder": "Вашето име",
+      "email": "Е-пошта",
+      "emailPlaceholder": "вашата@епошта.com",
+      "message": "Порака",
+      "messagePlaceholder": "Вашата порака...",
+      "send": "Испрати порака",
+      "sending": "Се испраќа...",
+      "sent": "Пораката е испратена!",
+      "sentDesc": "Ќе ви одговориме наскоро.",
+      "error": "Неуспешно испраќање. Обидете се повторно или испратете ни е-пошта директно."
+    }
+  },
+  "notFound": {
+    "title": "Го промашивте",
+    "titleAccent": "шутот",
+    "description": "Страницата што ја барате не постои.\nНема грижи — играта продолжува.",
+    "goHome": "Назад дома"
+  },
+  "footer": {
+    "links": "Линкови",
+    "followUs": "Следете не",
+    "rights": "Сите права задржани."
+  },
+  "game": {
+    "home": "ДОМА",
+    "away": "ГОСТИ",
+    "win": "ПОБЕДА",
+    "loss": "ПОРАЗ"
+  },
+  "marquee1": "БОРЕЦ БАСКЕТ · ВЕЛЕС · BOREC BASKETBALL",
+  "marquee2": "АКАДЕМИЈА · МИНИБАСКЕТ · ПРИКЛУЧИ СЕ"
+}

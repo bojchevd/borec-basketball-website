@@ -1,43 +1,43 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/animated-section";
-import { Button } from "@/components/ui/button";
+
 
 export const metadata: Metadata = {
   title: "Minibasket | Борец Баскет",
   description:
-    "Борец Minibasket — basketball for kids aged 7–12 in Велес, North Macedonia. Every Tuesday & Thursday at Сала Васил Главинов.",
+    "Борец Minibasket — кошарка за деца од 7–12 години во Велес, Северна Македонија. Секој вторник и четврток во Сала Васил Главинов.",
 };
 
 const benefits = [
   {
-    title: "Motor Skills",
-    body: "Basketball develops hand-eye coordination, footwork, and spatial awareness in young children at the most critical stage of physical development.",
+    title: "Моторни вештини",
+    body: "Кошарката ја развива координацијата око-рака, работата со нозе и просторната свесност кај малите деца во најкритичната фаза од физичкиот развој.",
     icon: "🏃",
   },
   {
-    title: "Coordination & Balance",
-    body: "Dribbling, catching, and moving simultaneously trains the brain and body to work together — skills that transfer far beyond the court.",
+    title: "Координација и баланс",
+    body: "Дриблањето, фаќањето и движењето истовремено го тренираат мозокот и телото да работат заедно — вештини што се пренесуваат далеку надвор од теренот.",
     icon: "⚖️",
   },
   {
-    title: "Teamwork",
-    body: "Kids learn that winning is a team effort. Sharing the ball, supporting teammates, and celebrating together builds powerful social habits.",
+    title: "Тимска работа",
+    body: "Децата учат дека победата е тимски напор. Споделувањето на топката, поддршката на соиграчите и заедничкото славење градат моќни социјални навики.",
     icon: "🤝",
   },
   {
-    title: "Confidence",
-    body: "Making a basket, learning a new move, or earning praise from a coach — each small win builds self-belief that lasts a lifetime.",
+    title: "Самодоверба",
+    body: "Да постигнеш кош, да научиш нов потег или да добиеш пофалба од тренерот — секоја мала победа гради самодоверба што трае цел живот.",
     icon: "⭐",
   },
   {
-    title: "Active Lifestyle",
-    body: "Two training sessions per week create a healthy routine. Kids who fall in love with sport at a young age tend to stay active for life.",
+    title: "Активен начин на живот",
+    body: "Два тренинзи неделно создаваат здрава рутина. Децата кои ќе се вљубат во спортот на мала возраст имаат тенденција да останат активни цел живот.",
     icon: "💪",
   },
   {
-    title: "Fun, Always",
-    body: "At Minibasket level, fun is non-negotiable. Our coaches are trained to keep sessions energetic, positive, and something kids look forward to all week.",
+    title: "Забава, секогаш",
+    body: "На Minibasket ниво, забавата не е опционална. Нашите тренери се обучени да ги одржуваат сесиите енергични, позитивни и нешто на што децата се радуваат цела недела.",
     icon: "🎉",
   },
 ];
@@ -59,15 +59,15 @@ export default function MinibasketPage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-4">
           <p className="mb-3 font-body text-sm uppercase tracking-widest text-brand-gold">
-            Борец Баскет · Велес · Ages 7–12
+            Борец Баскет · Велес · Возраст 7–12
           </p>
           <h1 className="font-heading text-6xl uppercase leading-none text-white md:text-8xl">
             Mini
             <span className="text-brand-gold">basket</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/60">
-            The best thing you can give a kid is a ball, a court, and a team.
-            Борец Minibasket is where the love of the game begins.
+            Најдоброто нешто што можете да му дадете на дете е топка, терен и тим.
+            Борец Minibasket е местото каде што започнува љубовта кон играта.
           </p>
         </div>
       </section>
@@ -79,22 +79,22 @@ export default function MinibasketPage() {
             {/* Schedule */}
             <div className="rounded-lg border border-brand-gold/20 bg-brand-gold/5 p-6 md:col-span-2">
               <p className="mb-1 font-body text-xs uppercase tracking-widest text-brand-gold">
-                Schedule
+                Распоред
               </p>
               <h2 className="mb-4 font-heading text-3xl text-white">
                 Секој вторник и четврток
               </h2>
               <p className="text-white/60 leading-relaxed">
-                Every Tuesday and Thursday — two sessions per week, perfectly
-                spaced to build rhythm and let kids recover. Exact session times
-                are communicated upon registration and may vary by age group.
+                Секој вторник и четврток — две сесии неделно, совршено
+                распоредени за градење ритам и опоравување. Точните термини
+                се соопштуваат при регистрација и може да варираат по возрасна група.
               </p>
             </div>
 
             {/* Location */}
             <div className="rounded-lg border border-white/10 bg-white/5 p-6">
               <p className="mb-1 font-body text-xs uppercase tracking-widest text-white/40">
-                Location
+                Локација
               </p>
               <h3 className="mb-2 font-heading text-xl text-white">
                 Сала Васил Главинов
@@ -104,8 +104,8 @@ export default function MinibasketPage() {
               </p>
               <div className="mt-4 h-px w-full bg-white/10" />
               <p className="mt-4 text-sm text-white/40">
-                The hall is centrally located and easily accessible from all
-                parts of Велес.
+                Салата е централно лоцирана и лесно достапна од сите
+                делови на Велес.
               </p>
             </div>
           </div>
@@ -138,32 +138,32 @@ export default function MinibasketPage() {
                 />
               </svg>
               <span className="font-body text-sm uppercase tracking-widest">
-                Photo coming soon
+                Фото наскоро
               </span>
             </div>
 
             <div className="space-y-5 text-white/70 leading-relaxed">
               <h2 className="font-heading text-3xl uppercase text-white">
-                Where It All<br />
-                <span className="text-brand-gold">Begins</span>
+                Каде сè<br />
+                <span className="text-brand-gold">започнува</span>
               </h2>
               <p>
-                Борец Minibasket is the entry point into our complete player
-                development pathway. Kids aged 7 to 12 are introduced to
-                basketball in a way that prioritises enjoyment and curiosity
-                first, technical skill second.
+                Борец Minibasket е влезната точка во нашиот целосен пат за
+                развој на играчи. Децата од 7 до 12 години се запознаваат со
+                кошарката на начин кој приоритизира уживање и љубопитност
+                прво, а техничка вештина второ.
               </p>
               <p>
-                Our coaches are experienced in working with young children and
-                understand that at this age, showing up with a smile is the
-                most important thing. Sessions are lively, structured, and
-                always finish with a game — because nothing beats the real
-                thing.
+                Нашите тренери се искусни во работа со мали деца и
+                разбираат дека на оваа возраст, да дојдеш со насмевка е
+                најважното нешто. Сесиите се живи, структурирани и
+                секогаш завршуваат со натпревар — затоа што ништо не е подобро
+                од вистинската игра.
               </p>
               <p>
-                The best Academy players in our history came through
-                Minibasket. Some of our current senior squad members first
-                touched a basketball at Сала Васил Главинов.
+                Најдобрите играчи на Академијата во нашата историја поминале
+                низ Minibasket. Некои од нашите сегашни сениорски играчи за прв
+                пат допреле топка во Сала Васил Главинов.
               </p>
             </div>
           </div>
@@ -175,10 +175,10 @@ export default function MinibasketPage() {
         <section className="mx-auto max-w-7xl px-4 py-20 border-t border-white/10">
           <div className="mb-12">
             <p className="mb-2 font-body text-sm uppercase tracking-widest text-brand-gold">
-              Why Basketball?
+              Зошто кошарка?
             </p>
             <h2 className="font-heading text-4xl uppercase text-white md:text-5xl">
-              Benefits of Starting <span className="text-brand-gold">Early</span>
+              Предности на ран <span className="text-brand-gold">почеток</span>
             </h2>
           </div>
 
@@ -229,7 +229,7 @@ export default function MinibasketPage() {
                   />
                 </svg>
                 <span className="font-body text-xs uppercase tracking-widest">
-                  Photo coming soon
+                  Фото наскоро
                 </span>
               </div>
             ))}
@@ -243,38 +243,38 @@ export default function MinibasketPage() {
           <div className="grid gap-12 md:grid-cols-2 md:items-start">
             <div>
               <p className="mb-2 font-body text-sm uppercase tracking-widest text-brand-gold">
-                For Parents
+                За родители
               </p>
               <h2 className="mb-6 font-heading text-4xl uppercase text-white md:text-5xl">
-                What to <span className="text-brand-gold">Expect</span>
+                Што да <span className="text-brand-gold">очекувате</span>
               </h2>
               <div className="space-y-4 text-white/60 leading-relaxed">
                 <p>
-                  No prior experience needed. Your child does not need to know
-                  how to play basketball — that is exactly what we are here for.
-                  All equipment is provided at sessions; just bring comfortable
-                  sports clothes and a water bottle.
+                  Не е потребно претходно искуство. Вашето дете не мора да знае
+                  да игра кошарка — токму за тоа сме тука.
+                  Целата опрема е обезбедена на тренинзите; само донесете удобна
+                  спортска облека и шише вода.
                 </p>
                 <p>
-                  Sessions last approximately 60–75 minutes and always include
-                  a warm-up, skill drills, small-sided games, and a cool-down.
-                  We keep groups small to ensure every child gets individual
-                  attention from the coach.
+                  Сесиите траат приближно 60–75 минути и секогаш вклучуваат
+                  загревање, вежби за вештини, мали натпревари и разладување.
+                  Групите ги одржуваме мали за да обезбедиме секое дете да добие
+                  индивидуално внимание од тренерот.
                 </p>
                 <p>
-                  Talented and motivated players will naturally progress into
-                  the Academy (M-12) program. There is no pressure — every
-                  child develops at their own pace.
+                  Талентираните и мотивирани играчи природно ќе напредуваат во
+                  програмата на Академијата (M-12). Нема притисок — секое
+                  дете се развива со свое темпо.
                 </p>
               </div>
             </div>
 
             <div className="space-y-4">
               {[
-                { q: "What age can my child start?", a: "From 7 years old. We work with children up to age 12 in the Minibasket program." },
-                { q: "Do I need to register in advance?", a: "Yes. Contact us through the form below and we will confirm availability and session details." },
-                { q: "Is there a fee?", a: "There is a modest monthly membership contribution. Details are provided upon registration." },
-                { q: "What if my child misses a session?", a: "No problem — life happens. Consistent attendance is encouraged but not strictly required at Minibasket level." },
+                { q: "На која возраст може да почне моето дете?", a: "Од 7 години. Работиме со деца до 12 години во Minibasket програмата." },
+                { q: "Дали треба однапред да се пријавам?", a: "Да. Контактирајте нè преку формуларот подолу и ќе ви потврдиме достапност и детали за термините." },
+                { q: "Дали има членарина?", a: "Има скромен месечен членски придонес. Деталите се обезбедуваат при регистрација." },
+                { q: "Што ако моето дете пропушти тренинг?", a: "Нема проблем — животот се случува. Редовното доаѓање се поттикнува, но не е строго задолжително на Minibasket ниво." },
               ].map((item) => (
                 <div
                   key={item.q}
@@ -298,22 +298,19 @@ export default function MinibasketPage() {
         <section className="mx-auto max-w-7xl px-4 py-20">
           <div className="overflow-hidden rounded-lg border border-brand-gold/20 bg-brand-gold/5 p-8 text-center md:p-16">
             <h2 className="font-heading text-4xl uppercase text-white md:text-5xl">
-              Ready to Join?
+              Спремни сте?
             </h2>
             <p className="mx-auto mt-4 max-w-md text-white/60 leading-relaxed">
-              Секој вторник и четврток, Сала Васил Главинов. Get in touch and
-              we will take care of the rest.
+              Секој вторник и четврток, Сала Васил Главинов. Контактирајте нè и
+              ние ќе се погрижиме за останатото.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Button
-                className="bg-brand-red hover:bg-brand-red/80 font-body"
-                render={<Link href="/contact">Contact Us</Link>}
-              />
-              <Button
-                variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 font-body"
-                render={<Link href="/academy">View Academy →</Link>}
-              />
+              <Link href="/contact" className="inline-flex items-center justify-center rounded-md bg-brand-red px-4 py-2 text-sm font-medium text-white hover:bg-brand-red/80 font-body">
+                Контактирајте нè
+              </Link>
+              <Link href="/academy" className="inline-flex items-center justify-center rounded-md border border-white/30 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 font-body">
+                Погледни Академија →
+              </Link>
             </div>
           </div>
         </section>

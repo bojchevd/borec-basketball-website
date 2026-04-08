@@ -1,12 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/animated-section";
-import { Button } from "@/components/ui/button";
+
 
 export const metadata: Metadata = {
   title: "Academy | Борец Баскет",
   description:
-    "Борец Basketball Academy — competitive youth training for players aged 12–18 in Велес, North Macedonia.",
+    "Борец Кошаркарска Академија — натпреварувачки младински тренинг за играчи од 12–18 години во Велес, Северна Македонија.",
 };
 
 const ageGroups = [
@@ -14,48 +14,48 @@ const ageGroups = [
     label: "M-12",
     ages: "до 12 години",
     description:
-      "The entry point into competitive basketball. Players build a technical foundation — dribbling, passing, shooting form — in a structured but fun environment.",
-    highlight: "Foundation",
+      "Влезна точка во натпреварувачката кошарка. Играчите градат техничка основа — дриблинг, додавање, форма на шут — во структурирана но забавна средина.",
+    highlight: "Основа",
   },
   {
     label: "M-14",
     ages: "до 14 години",
     description:
-      "Tactical awareness begins here. Players start learning positional play, team sets, and are introduced to regional league competition.",
-    highlight: "Development",
+      "Тактичката свест започнува тука. Играчите учат позициска игра, тимски системи и се вклучуваат во значајни лигашки натпревари.",
+    highlight: "Развој",
   },
   {
     label: "M-16",
     ages: "до 16 години",
     description:
-      "High-intensity training with a focus on athleticism, decision-making under pressure, and preparation for national-level competition.",
-    highlight: "Competition",
+      "Високо-интензивен тренинг со фокус на атлетизам, одлучување под притисок и подготовка за натпревари на национално ниво.",
+    highlight: "Натпревар",
   },
   {
     label: "M-18",
     ages: "до 18 години",
     description:
-      "The final step before the senior squad. Players train alongside the first team and are evaluated for promotion into Борец's senior program.",
-    highlight: "Elite",
+      "Последниот чекор пред сениорскиот тим. Играчите тренираат заедно со првиот тим и се оценуваат за промоција во сениорската програма на Борец.",
+    highlight: "Елита",
   },
 ];
 
 const philosophyPoints = [
   {
-    title: "Discipline First",
-    body: "We believe that on-court excellence starts with off-court character. Every academy player is held to high standards of punctuality, respect, and commitment.",
+    title: "Дисциплина пред сè",
+    body: "Веруваме дека извонредноста на терен започнува со карактерот надвор од него. Секој играч во Академијата се држи до високи стандарди на точност, почит и посветеност.",
   },
   {
-    title: "Individual Growth",
-    body: "Coaches track each player's development individually. Personal goals are set at the start of each season and reviewed regularly.",
+    title: "Индивидуален развој",
+    body: "Тренерите го следат развојот на секој играч поединечно. Лични цели се поставуваат на почетокот на секоја сезона и редовно се ревидираат.",
   },
   {
-    title: "Playing Time Matters",
-    body: "Academy players compete in official ФБСМ league fixtures from M-12 upward. Real games, real stakes, real development.",
+    title: "Играчкото време е важно",
+    body: "Играчите од Академијата се натпреваруваат во официјални лигашки натпревари на КФСМ од М-12 па нагоре. Вистински натпревари, вистински предизвици, вистински развој.",
   },
   {
-    title: "The Борец Pathway",
-    body: "From Minibasket to Academy to the senior first team — every great Борец player walked this same road. The pipeline is real.",
+    title: "Патот на Борец",
+    body: "Од Минибаскет до Академија до сениорскиот прв тим — секој голем играч на Борец го поминал истиот пат. Системот функционира.",
   },
 ];
 
@@ -80,13 +80,12 @@ export default function AcademyPage() {
             Борец Баскет · Велес
           </p>
           <h1 className="font-heading text-6xl uppercase leading-none text-white md:text-8xl">
-            Basketball<br />
-            <span className="text-brand-red">Academy</span>
+            Кошаркарска<br />
+            <span className="text-brand-red">Академија</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/60">
-            Competitive youth basketball in the heart of North Macedonia. Four
-            age groups, one goal — developing the next generation of Борец
-            players.
+            Натпреварувачка младинска кошарка во срцето на Македонија. Четири
+            возрасни групи, една цел — развој на следната генерација играчи на Борец.
           </p>
         </div>
       </section>
@@ -97,25 +96,23 @@ export default function AcademyPage() {
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div className="space-y-5 text-white/70 leading-relaxed">
               <h2 className="font-heading text-3xl uppercase text-white">
-                Serious Training.<br />
-                <span className="text-brand-gold">Serious Coaches.</span>
+                Сериозен тренинг.<br />
+                <span className="text-brand-gold">Сериозни тренери.</span>
               </h2>
               <p>
-                Борец Basketball Academy operates under the umbrella of КК
-                Борец Велес, one of Macedonia&apos;s most storied clubs. Our
-                Academy coaches are licensed by the Basketball Federation of
-                North Macedonia (ФБСМ) and bring both playing and coaching
-                experience at the highest domestic level.
+                Кошаркарската Академија на Борец функционира како една целина со КК
+                Борец Велес. Нашите
+                тренери во Академијата се лиценцирани од Кошаркарската Федерација на Македонија (КФСМ) и носат искуство од играње и тренирање
+                на највисоко младинско и сениорско ниво.
               </p>
               <p>
-                Training takes place at{" "}
-                <strong className="text-white">Спортска сала Гемиџии</strong> in
-                Велес — a well-equipped facility that hosts both Academy
-                sessions and senior team practices. Players breathe the same
-                air as the pros from day one.
+                Тренинзите се одржуваат во две сали{" "}
+                <strong className="text-white">Спортската сала Гемиџии / УЗУС</strong> во
+                Велес — добро опремени објекти каде се одржуваат и тренинзите на
+                Академијата и на сениорскиот тим.
               </p>
               <p className="text-sm text-white/40">
-                Спортска сала Гемиџии · Велес, Северна Македонија
+                Спортска сала Гемиџии · Сала УЗУС · Велес, Македонија
               </p>
             </div>
 
@@ -141,7 +138,7 @@ export default function AcademyPage() {
                 />
               </svg>
               <span className="font-body text-sm uppercase tracking-widest">
-                Photo coming soon
+                Фото наскоро
               </span>
             </div>
           </div>
@@ -153,10 +150,10 @@ export default function AcademyPage() {
         <section className="mx-auto max-w-7xl px-4 py-20 border-t border-white/10">
           <div className="mb-12">
             <p className="mb-2 font-body text-sm uppercase tracking-widest text-brand-red">
-              Programs
+              Програми
             </p>
             <h2 className="font-heading text-4xl uppercase text-white md:text-5xl">
-              Age <span className="text-brand-red">Groups</span>
+              Возрасни <span className="text-brand-red">групи</span>
             </h2>
           </div>
 
@@ -192,21 +189,21 @@ export default function AcademyPage() {
             <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div>
                 <h2 className="font-heading text-3xl uppercase text-white md:text-4xl">
-                  The Борец Pathway
+                  Патот на Борец
                 </h2>
                 <p className="mt-3 max-w-lg text-white/80 leading-relaxed">
-                  Minibasket → M-12 → M-14 → M-16 → M-18 → Senior Team. Every
-                  step is deliberate. Every season builds on the last. This is
-                  how we produce players who compete at the national level.
+                  Минибаскет → M-12 → M-14 → M-16 → M-18 → Сениорски тим. Секој
+                  чекор е намерен. Секоја сезона гради врз претходната. Така
+                  создаваме играчи кои се натпреваруваат на национално ниво.
                 </p>
               </div>
               <div className="flex flex-col items-start gap-2 font-heading text-2xl uppercase text-white/20 md:items-end">
-                <span className="text-white">Senior</span>
+                <span className="text-white">Сениори</span>
                 <span>M-18</span>
                 <span>M-16</span>
                 <span>M-14</span>
                 <span>M-12</span>
-                <span className="text-brand-gold/60">Minibasket</span>
+                <span className="text-brand-gold/60">Минибаскет</span>
               </div>
             </div>
           </div>
@@ -218,10 +215,10 @@ export default function AcademyPage() {
         <section className="mx-auto max-w-7xl px-4 py-20 border-t border-white/10">
           <div className="mb-12">
             <p className="mb-2 font-body text-sm uppercase tracking-widest text-brand-red">
-              Our Approach
+              Наш пристап
             </p>
             <h2 className="font-heading text-4xl uppercase text-white md:text-5xl">
-              Training <span className="text-brand-red">Philosophy</span>
+              Тренинг <span className="text-brand-red">филозофија</span>
             </h2>
           </div>
 
@@ -271,7 +268,7 @@ export default function AcademyPage() {
                   />
                 </svg>
                 <span className="font-body text-xs uppercase tracking-widest">
-                  Photo coming soon
+                  Фото наскоро
                 </span>
               </div>
             ))}
@@ -285,33 +282,30 @@ export default function AcademyPage() {
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div>
               <p className="mb-2 font-body text-sm uppercase tracking-widest text-brand-red">
-                Join the Academy
+                Приклучи се
               </p>
               <h2 className="mb-6 font-heading text-4xl uppercase text-white md:text-5xl">
-                How to <span className="text-brand-red">Enroll</span>
+                Како да се <span className="text-brand-red">запишете</span>
               </h2>
               <div className="space-y-4 text-white/60 leading-relaxed">
                 <p>
-                  Tryouts are held at the beginning of each season
-                  (September) and mid-season (January) for exceptional
-                  candidates. Players are evaluated on physical attributes,
-                  basketball IQ, coachability, and work ethic — not just
-                  raw skill.
+                  Селекции се одржуваат на почетокот на секоја сезона
+                  (септември) и среде сезона (јануари) за пријава во лига. Играчите се оценуваат по подготвеност за тренирање и работна етика — не само
+                  по талент.
                 </p>
                 <p>
-                  To register your interest or ask about the next tryout
-                  date, reach out through our contact page. A member of the
-                  Academy staff will respond within 48 hours.
+                  За да го пријавите вашиот интерес или да прашате за следниот
+                  термин за селекција, контактирајте нè преку нашата контакт страница.
+                  Член од тимот на Академијата ќе одговори во најкраток можен рок.
                 </p>
                 <p className="text-sm text-white/40">
-                  Тренинзи: Спортска сала Гемиџии, Велес
+                  Тренинзи: Сала УЗУС / Спортска сала Гемиџии, Велес
                 </p>
               </div>
               <div className="mt-8">
-                <Button
-                  className="bg-brand-red hover:bg-brand-red/80 font-body"
-                  render={<Link href="/contact">Contact Us</Link>}
-                />
+                <Link href="/contact" className="inline-flex items-center justify-center rounded-md bg-brand-red px-4 py-2 text-sm font-medium text-white hover:bg-brand-red/80 font-body">
+                  Контактирајте нè
+                </Link>
               </div>
             </div>
 
@@ -337,7 +331,7 @@ export default function AcademyPage() {
                 />
               </svg>
               <span className="font-body text-sm uppercase tracking-widest">
-                Photo coming soon
+                Фото наскоро
               </span>
             </div>
           </div>

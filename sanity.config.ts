@@ -6,8 +6,8 @@ import { game } from "./sanity/schemas/game";
 export default defineConfig({
   name: "borec-basketball",
   title: "Borec Basketball CMS",
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
+  projectId: "3juqa5k6",
+  dataset: "production",
   plugins: [structureTool()],
   schema: { types: [post, game] },
 });

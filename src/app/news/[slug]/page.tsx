@@ -8,6 +8,7 @@ import type { Post } from "@/lib/sanity/types";
 import { urlFor } from "@/lib/sanity/image";
 import { formatPostDate } from "@/lib/utils";
 import { PortableText } from "@/components/portable-text";
+import { getTranslations } from "@/lib/i18n";
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -29,13 +30,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const t = getTranslations("mk");
   const { slug } = await params;
   const post = await client.fetch<Post>(POST_BY_SLUG_QUERY, { slug }).catch(() => null);
   if (!post) notFound();
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-20">
-      <Link href="/news" className="mb-8 inline-block text-sm text-white/50 hover:text-white">&larr; Back to News</Link>
+      <Link href="/news" className="mb-8 inline-block text-sm text-white/50 hover:text-white">{t.news.backToNews}</Link>
       <p className="text-sm font-medium uppercase tracking-wider text-brand-red">{formatPostDate(post.publishedAt)}</p>
       <h1 className="mt-2 font-heading text-4xl uppercase text-white md:text-5xl">{post.title}</h1>
       {post.coverImage && (
