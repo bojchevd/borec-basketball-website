@@ -1,12 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/animated-section";
+import { LightboxImage } from "@/components/lightbox";
 
 
 export const metadata: Metadata = {
-  title: "Minibasket | Борец Баскет",
+  title: "Минибаскет | Борец Баскет",
   description:
-    "Борец Minibasket — кошарка за деца од 7–12 години во Велес, Северна Македонија. Секој вторник и четврток во Сала Васил Главинов.",
+    "Борец Минибаскет — кошарка за деца од 7–12 години во Велес, Македонија. Секој вторник и четврток во Сала Васил Главинов.",
 };
 
 const benefits = [
@@ -37,12 +39,12 @@ const benefits = [
   },
   {
     title: "Забава, секогаш",
-    body: "На Minibasket ниво, забавата не е опционална. Нашите тренери се обучени да ги одржуваат сесиите енергични, позитивни и нешто на што децата се радуваат цела недела.",
+    body: "На Минибаскет ниво, забавата не е опционална. Нашите тренери се обучени да ги одржуваат сесиите енергични, позитивни и нешто на што децата се радуваат цела недела.",
     icon: "🎉",
   },
 ];
 
-export default function MinibasketPage() {
+export default function МинибаскетPage() {
   return (
     <>
       {/* ─── Hero ─── */}
@@ -61,13 +63,13 @@ export default function MinibasketPage() {
           <p className="mb-3 font-body text-sm uppercase tracking-widest text-brand-gold">
             Борец Баскет · Велес · Возраст 7–12
           </p>
-          <h1 className="font-heading text-6xl uppercase leading-none text-white md:text-8xl">
-            Mini
-            <span className="text-brand-gold">basket</span>
+          <h1 className="font-heading text-[7vw] sm:text-5xl uppercase leading-none text-white md:text-8xl">
+            Мини
+            <span className="text-brand-gold">баскет</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/60">
             Најдоброто нешто што можете да му дадете на дете е топка, терен и тим.
-            Борец Minibasket е местото каде што започнува љубовта кон играта.
+            Борец Минибаскет е местото каде што започнува љубовта кон играта.
           </p>
         </div>
       </section>
@@ -85,9 +87,8 @@ export default function MinibasketPage() {
                 Секој вторник и четврток
               </h2>
               <p className="text-white/60 leading-relaxed">
-                Секој вторник и четврток — две сесии неделно, совршено
-                распоредени за градење ритам и опоравување. Точните термини
-                се соопштуваат при регистрација и може да варираат по возрасна група.
+                Секој вторник и четврток од 20:00 ч. Доволно за градење здрави
+                навики и учење на основите на кошарката.
               </p>
             </div>
 
@@ -100,7 +101,7 @@ export default function MinibasketPage() {
                 Сала Васил Главинов
               </h3>
               <p className="text-sm text-white/50 leading-relaxed">
-                Велес, Северна Македонија
+                Велес
               </p>
               <div className="mt-4 h-px w-full bg-white/10" />
               <p className="mt-4 text-sm text-white/40">
@@ -116,30 +117,13 @@ export default function MinibasketPage() {
       <AnimatedSection delay={0.05}>
         <section className="mx-auto max-w-7xl px-4 pb-20 border-t border-white/10 pt-20">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
-            {/* Image placeholder */}
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-white/5 border border-white/10 flex flex-col items-center justify-center gap-3 text-white/20">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-              <span className="font-body text-sm uppercase tracking-widest">
-                Фото наскоро
-              </span>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+              <Image
+                src="/minibasket/practice_01.jpg"
+                alt="Минибаскет тренинг"
+                fill
+                className="object-cover"
+              />
             </div>
 
             <div className="space-y-5 text-white/70 leading-relaxed">
@@ -148,7 +132,7 @@ export default function MinibasketPage() {
                 <span className="text-brand-gold">започнува</span>
               </h2>
               <p>
-                Борец Minibasket е влезната точка во нашиот целосен пат за
+                Борец Минибаскет е влезната точка во нашиот целосен пат за
                 развој на играчи. Децата од 7 до 12 години се запознаваат со
                 кошарката на начин кој приоритизира уживање и љубопитност
                 прво, а техничка вештина второ.
@@ -162,7 +146,7 @@ export default function MinibasketPage() {
               </p>
               <p>
                 Најдобрите играчи на Академијата во нашата историја поминале
-                низ Minibasket. Некои од нашите сегашни сениорски играчи за прв
+                низ Минибаскет. Некои од нашите сегашни сениорски играчи за прв
                 пат допреле топка во Сала Васил Главинов.
               </p>
             </div>
@@ -200,40 +184,59 @@ export default function MinibasketPage() {
         </section>
       </AnimatedSection>
 
-      {/* ─── Photo placeholders ─── */}
+      {/* ─── Photo Gallery ─── */}
       <AnimatedSection delay={0.05}>
         <section className="mx-auto max-w-7xl px-4 pb-20">
-          <div className="grid gap-4 grid-cols-2 md:grid-cols-4">
-            {[0, 1, 2, 3].map((n) => (
-              <div
-                key={n}
-                className="aspect-square rounded-lg bg-white/5 border border-white/10 flex flex-col items-center justify-center gap-2 text-white/15"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={1}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+          <div className="mb-12">
+            <p className="mb-2 font-body text-sm uppercase tracking-widest text-brand-gold">
+              Галерија
+            </p>
+            <h2 className="font-heading text-4xl uppercase text-white md:text-5xl">
+              Од <span className="text-brand-gold">теренот</span>
+            </h2>
+          </div>
+
+          {/* Practice photos */}
+          <div className="grid gap-4 grid-cols-3">
+            {[
+              { src: "/minibasket/practice_01.jpg", alt: "Минибаскет тренинг" },
+              { src: "/minibasket/practice_02.jpg", alt: "Минибаскет тренинг" },
+              { src: "/minibasket/practice_03.jpg", alt: "Минибаскет тренинг" },
+            ].map((photo) => (
+              <AnimatedSection key={photo.src} delay={0.05}>
+                <div className="relative aspect-square overflow-hidden rounded-lg">
+                  <LightboxImage
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover"
                   />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-                <span className="font-body text-xs uppercase tracking-widest">
-                  Фото наскоро
-                </span>
-              </div>
+                </div>
+              </AnimatedSection>
             ))}
           </div>
+
+          {/* Game photos — Minibasket Caravan */}
+          <div className="mt-4 grid gap-4 grid-cols-2">
+            {[
+              { src: "/minibasket/game_01.jpg", alt: "Минибаскет Караван — КФСМ" },
+              { src: "/minibasket/game_02.jpg", alt: "Минибаскет Караван — КФСМ" },
+            ].map((photo) => (
+              <AnimatedSection key={photo.src} delay={0.08}>
+                <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
+                  <LightboxImage
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+          <p className="mt-3 text-xs text-white/30 text-right">
+            Фотографии од натпревар: Минибаскет Караван во организација на Кошаркарската Федерација на Македонија (КФСМ)
+          </p>
         </section>
       </AnimatedSection>
 
@@ -256,25 +259,27 @@ export default function MinibasketPage() {
                   спортска облека и шише вода.
                 </p>
                 <p>
-                  Сесиите траат приближно 60–75 минути и секогаш вклучуваат
-                  загревање, вежби за вештини, мали натпревари и разладување.
-                  Групите ги одржуваме мали за да обезбедиме секое дете да добие
-                  индивидуално внимание од тренерот.
+                  Тренингот трае 60 минути. Се трудиме секое дете да добие
+                  подеднакво иднивидуално внимание од тренерот.
                 </p>
                 <p>
-                  Талентираните и мотивирани играчи природно ќе напредуваат во
-                  програмата на Академијата (M-12). Нема притисок — секое
-                  дете се развива со свое темпо.
+                  Нашите момчиња и девојчиња неколку пати во годината добиваат
+                  шанса да учествуваат на забавни минибаскет дружби и натпревари
+                  против нивните врсници од различни делови на Македонија,
+                  вклучувајќи го и Минибаскет Караванот во организација на
+                  Кошаркарската Федерација на Македонија (КФСМ). Ова е супер
+                  основа и увертира да се припремат за компетитивни натпревари
+                  почнувајќи од 11–12 години.
                 </p>
               </div>
             </div>
 
             <div className="space-y-4">
               {[
-                { q: "На која возраст може да почне моето дете?", a: "Од 7 години. Работиме со деца до 12 години во Minibasket програмата." },
+                { q: "На која возраст може да почне моето дете?", a: "Од 7 години. Работиме со деца до 12 години во Минибаскет програмата." },
                 { q: "Дали треба однапред да се пријавам?", a: "Да. Контактирајте нè преку формуларот подолу и ќе ви потврдиме достапност и детали за термините." },
                 { q: "Дали има членарина?", a: "Има скромен месечен членски придонес. Деталите се обезбедуваат при регистрација." },
-                { q: "Што ако моето дете пропушти тренинг?", a: "Нема проблем — животот се случува. Редовното доаѓање се поттикнува, но не е строго задолжително на Minibasket ниво." },
+                { q: "Што ако моето дете пропушти тренинг?", a: "Нема проблем — животот се случува. Редовното доаѓање се поттикнува, но не е строго задолжително на Минибаскет ниво." },
               ].map((item) => (
                 <div
                   key={item.q}

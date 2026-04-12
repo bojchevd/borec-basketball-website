@@ -7,7 +7,8 @@
     "minibasket": "Минибаскет",
     "history": "Историја",
     "sponsors": "Спонзори",
-    "contact": "Контакт"
+    "contact": "Контакт",
+    "shop": "Фан Шоп"
   },
   "home": {
     "established": "Осн. 2009 · Велес",
@@ -91,7 +92,7 @@
   "contact": {
     "title": "Контакт",
     "locationLabel": "Локација",
-    "locationValue": "Велес, Северна Македонија",
+    "locationValue": "Велес, Македонија",
     "emailLabel": "Е-пошта",
     "socialLabel": "Социјални мрежи",
     "form": {

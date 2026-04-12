@@ -10,10 +10,10 @@ export const metadata: Metadata = {
     default: "Борец Баскет | Borec Basketball",
     template: "%s | Борец Баскет",
   },
-  description: "Official website of Borec Basketball club from Veles, North Macedonia.",
+  description: "Official website of Borec Basketball club from Veles, Macedonia.",
   openGraph: {
     title: "Борец Баскет | Borec Basketball",
-    description: "Official website of Borec Basketball club from Veles, North Macedonia.",
+    description: "Official website of Borec Basketball club from Veles, Macedonia.",
     url: "https://borecbasketball.com",
     siteName: "Борец Баскет",
     locale: "mk_MK",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="mk" className={`${rogLyonsType.variable} ${poppins.variable}`}>
-      <body>
+      <body className="overflow-x-hidden">
         <I18nProvider>
           <Navbar />
           <main className="pt-16">{children}</main>

@@ -14,6 +14,7 @@ export function Footer() {
     { href: "/roster", label: t.nav.roster },
     { href: "/academy", label: t.nav.academy },
     { href: "/contact", label: t.nav.contact },
+    { href: "/shop", label: t.nav.shop },
   ];
 
   return (
@@ -46,7 +47,19 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-white/30">
-          &copy; {new Date().getFullYear()} Борец Баскет. {t.footer.rights}
+          <p>&copy; {new Date().getFullYear()} Борец Баскет. {t.footer.rights}</p>
+          <p className="mt-2">
+            Изработено од{" "}
+            <a
+              href="https://www.instagram.com/slowmorningmedia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/50 transition-colors hover:text-brand-red"
+            >
+              Slow Morning Media
+            </a>
+            {" "}— контактирајте нè за соработка.
+          </p>
         </div>
       </div>
     </footer>

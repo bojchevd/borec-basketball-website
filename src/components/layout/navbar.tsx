@@ -18,6 +18,7 @@ export function Navbar() {
     { href: "/history", label: t.nav.history },
     { href: "/sponsors", label: t.nav.sponsors },
     { href: "/contact", label: t.nav.contact },
+    { href: "/shop", label: t.nav.shop },
   ];
 
   return (
@@ -25,6 +26,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logo.png" alt="Borec Basketball" width={40} height={40} />
+          <span className="font-heading text-lg uppercase text-white">Борец Баскет</span>
         </Link>
         <div className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (

@@ -1,12 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/animated-section";
+import { LightboxImage } from "@/components/lightbox";
 
 
 export const metadata: Metadata = {
   title: "Academy | Борец Баскет",
   description:
-    "Борец Кошаркарска Академија — натпреварувачки младински тренинг за играчи од 12–18 години во Велес, Северна Македонија.",
+    "Борец Кошаркарска Академија — натпреварувачки младински тренинг за играчи од 12–18 години во Велес, Македонија.",
 };
 
 const ageGroups = [
@@ -77,9 +79,9 @@ export default function AcademyPage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-4">
           <p className="mb-3 font-body text-sm uppercase tracking-widest text-brand-red">
-            Борец Баскет · Велес
+            Борец Баскет · Велес · Возраст 11–18
           </p>
-          <h1 className="font-heading text-6xl uppercase leading-none text-white md:text-8xl">
+          <h1 className="font-heading text-[7vw] sm:text-5xl uppercase leading-none text-white md:text-8xl">
             Кошаркарска<br />
             <span className="text-brand-red">Академија</span>
           </h1>
@@ -106,40 +108,22 @@ export default function AcademyPage() {
                 на највисоко младинско и сениорско ниво.
               </p>
               <p>
-                Тренинзите се одржуваат во две сали{" "}
-                <strong className="text-white">Спортската сала Гемиџии / УЗУС</strong> во
-                Велес — добро опремени објекти каде се одржуваат и тренинзите на
-                Академијата и на сениорскиот тим.
+                Тренинзите се одржуваат во две сали во Велес —
+                Спортската сала Гемиџии и сала УЗУС — добро опремени објекти
+                каде се одржуваат и тренинзите на Академијата и на сениорскиот тим.
               </p>
               <p className="text-sm text-white/40">
-                Спортска сала Гемиџии · Сала УЗУС · Велес, Македонија
+                Спортс��а сала Гемиџии · Сала УЗУС · Велес, Македонија
               </p>
             </div>
 
-            {/* Image placeholder */}
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-white/5 border border-white/10 flex flex-col items-center justify-center gap-3 text-white/20">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-              <span className="font-body text-sm uppercase tracking-widest">
-                Фото наскоро
-              </span>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+              <Image
+                src="/academy-hero.jpg"
+                alt="Борец ��ошаркарска Академија"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
@@ -239,38 +223,35 @@ export default function AcademyPage() {
         </section>
       </AnimatedSection>
 
-      {/* ─── Photo placeholder row ─── */}
+      {/* ─── Photo Gallery ─── */}
       <AnimatedSection delay={0.05}>
         <section className="mx-auto max-w-7xl px-4 pb-20">
-          <div className="grid gap-4 grid-cols-3">
-            {[0, 1, 2].map((n) => (
-              <div
-                key={n}
-                className="aspect-square rounded-lg bg-white/5 border border-white/10 flex flex-col items-center justify-center gap-2 text-white/15"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={1}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+          <div className="mb-12">
+            <p className="mb-2 font-body text-sm uppercase tracking-widest text-brand-red">
+              Галерија
+            </p>
+            <h2 className="font-heading text-4xl uppercase text-white md:text-5xl">
+              Од <span className="text-brand-red">теренот</span>
+            </h2>
+          </div>
+
+          <div className="grid gap-4 grid-cols-2 md:grid-cols-4">
+            {[
+              { src: "/academy/training_01.jpg", alt: "Академија тренинг" },
+              { src: "/academy/training_02.jpg", alt: "Академија тренинг" },
+              { src: "/academy/training_03.jpg", alt: "Академија тренинг" },
+              { src: "/academy/training_04.jpg", alt: "Академија тренинг" },
+            ].map((photo) => (
+              <AnimatedSection key={photo.src} delay={0.05}>
+                <div className="relative aspect-square overflow-hidden rounded-lg">
+                  <LightboxImage
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover"
                   />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-                <span className="font-body text-xs uppercase tracking-widest">
-                  Фото наскоро
-                </span>
-              </div>
+                </div>
+              </AnimatedSection>
             ))}
           </div>
         </section>
@@ -299,7 +280,7 @@ export default function AcademyPage() {
                   Член од тимот на Академијата ќе одговори во најкраток можен рок.
                 </p>
                 <p className="text-sm text-white/40">
-                  Тренинзи: Сала УЗУС / Спортска сала Гемиџии, Велес
+                  Тренинзи: Сала УЗУС и Спортска сала Гемиџии, Велес
                 </p>
               </div>
               <div className="mt-8">

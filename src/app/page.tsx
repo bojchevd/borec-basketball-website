@@ -7,6 +7,7 @@ import { GameCard } from "@/components/game-card";
 import { SponsorGrid } from "@/components/sponsor-grid";
 import { Marquee } from "@/components/marquee";
 import { AnimatedSection } from "@/components/animated-section";
+import { NewsCard } from "@/components/news-card";
 import { formatPostDate } from "@/lib/utils";
 import { sponsors } from "@/data/sponsors";
 import { getTranslations } from "@/lib/i18n";
@@ -256,7 +257,7 @@ export default async function Home() {
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
             {posts.map((post) => (
-              <MockNewsCard key={post._id} post={post as any} />
+              <NewsCard key={post._id} post={post} />
             ))}
           </div>
           <div className="mt-8 text-center">
@@ -317,6 +318,47 @@ export default async function Home() {
             {t.home.ourSponsors}
           </h2>
           <SponsorGrid sponsors={[...sponsors]} />
+        </section>
+      </AnimatedSection>
+
+      {/* Fan Shop Promo */}
+      <AnimatedSection>
+        <section className="mx-auto max-w-7xl px-4 pb-20">
+          <Link href="/shop" className="group block">
+            <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.03] transition-colors hover:border-brand-red/40">
+              <div className="grid grid-cols-3 md:grid-cols-5">
+                {[
+                  { src: "/merch/hoodie.jpg", alt: "Дуксер", hide: false },
+                  { src: "/merch/termos.jpg", alt: "Термос", hide: false },
+                  { src: "/merch/mug.jpg", alt: "Шолја", hide: false },
+                  { src: "/merch/jersey_home.png", alt: "Домашен дрес", hide: true },
+                  { src: "/merch/jersey_away.png", alt: "Гостински дрес", hide: true },
+                ].map((item) => (
+                  <div key={item.src} className={`relative aspect-square overflow-hidden ${item.hide ? "hidden md:block" : ""}`}>
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center justify-between p-6">
+                <div>
+                  <h2 className="font-heading text-2xl uppercase text-white md:text-3xl">
+                    Фан <span className="text-brand-red">Шоп</span>
+                  </h2>
+                  <p className="mt-1 text-sm text-white/50">
+                    Дуксери, термоси, шолји и официјални дресови на Борец Баскет.
+                  </p>
+                </div>
+                <span className="hidden md:inline-flex items-center gap-2 rounded-md border border-white/20 px-4 py-2 text-sm font-medium text-white transition-colors group-hover:border-brand-red group-hover:text-brand-red font-body">
+                  Нарачај →
+                </span>
+              </div>
+            </div>
+          </Link>
         </section>
       </AnimatedSection>
     </>
