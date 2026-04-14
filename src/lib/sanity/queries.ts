@@ -11,13 +11,13 @@ export const LATEST_POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc) 
 }`;
 
 export const UPCOMING_GAMES_QUERY = `*[_type == "game" && date >= now()] | order(date asc) {
-  _id, date, opponent, homeAway, location, result, isWin
+  _id, date, opponent, homeAway, location, result, isWin, youtubeUrl
 }`;
 
 export const PAST_GAMES_QUERY = `*[_type == "game" && date < now()] | order(date desc) {
-  _id, date, opponent, homeAway, location, result, isWin
+  _id, date, opponent, homeAway, location, result, isWin, youtubeUrl
 }`;
 
 export const NEXT_GAMES_QUERY = `*[_type == "game" && date >= now()] | order(date asc) [0...3] {
-  _id, date, opponent, homeAway, location, result, isWin
+  _id, date, opponent, homeAway, location, result, isWin, youtubeUrl
 }`;

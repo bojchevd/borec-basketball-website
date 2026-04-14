@@ -4,12 +4,11 @@ import { client } from "@/lib/sanity/client";
 import { LATEST_POSTS_QUERY, NEXT_GAMES_QUERY } from "@/lib/sanity/queries";
 import type { Post, Game } from "@/lib/sanity/types";
 import { GameCard } from "@/components/game-card";
-import { SponsorGrid } from "@/components/sponsor-grid";
+import { FriendsMarquee } from "@/components/friends-marquee";
 import { Marquee } from "@/components/marquee";
 import { AnimatedSection } from "@/components/animated-section";
 import { NewsCard } from "@/components/news-card";
 import { formatPostDate } from "@/lib/utils";
-import { sponsors } from "@/data/sponsors";
 import { getTranslations } from "@/lib/i18n";
 
 export const revalidate = 60;
@@ -230,25 +229,6 @@ export default async function Home() {
 
       <Marquee text={t.marquee1} />
 
-      {/* Upcoming Games */}
-      <AnimatedSection>
-        <section className="mx-auto max-w-5xl px-4 py-20">
-          <h2 className="mb-8 font-heading text-4xl uppercase text-white md:text-5xl">
-            {t.home.upcomingGames} <span className="text-brand-red">{t.home.upcomingGamesAccent}</span>
-          </h2>
-          <div>
-            {games.map((game) => (
-              <GameCard key={game._id} game={game} />
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Link href="/schedule" className="inline-flex items-center justify-center rounded-md border border-white/30 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 font-body">
-              {t.home.fullSchedule}
-            </Link>
-          </div>
-        </section>
-      </AnimatedSection>
-
       {/* Latest News */}
       <AnimatedSection>
         <section className="mx-auto max-w-7xl px-4 py-20">
@@ -315,9 +295,9 @@ export default async function Home() {
       <AnimatedSection>
         <section className="mx-auto max-w-5xl px-4 py-20">
           <h2 className="mb-12 text-center font-heading text-3xl uppercase text-white/30">
-            {t.home.ourSponsors}
+            Пријатели на клубот
           </h2>
-          <SponsorGrid sponsors={[...sponsors]} />
+          <FriendsMarquee />
         </section>
       </AnimatedSection>
 

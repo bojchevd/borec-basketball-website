@@ -48,6 +48,18 @@ export const game = defineType({
       type: "boolean",
       description: "Did Borec win this game?",
     }),
+    defineField({
+      name: "youtubeUrl",
+      title: "YouTube Stream",
+      type: "url",
+      description: "Link to YouTube live stream or game recording",
+      validation: (rule) =>
+        rule.uri({ scheme: ["https"] }).custom((url) => {
+          if (!url) return true;
+          if (url.includes("youtube.com") || url.includes("youtu.be")) return true;
+          return "Must be a YouTube URL";
+        }),
+    }),
   ],
   orderings: [
     {

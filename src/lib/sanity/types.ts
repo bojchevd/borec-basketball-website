@@ -18,4 +18,5 @@ export interface Game {
   location: string;
   result?: string;
   isWin?: boolean;
+  youtubeUrl?: string;
 }
