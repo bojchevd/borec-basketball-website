@@ -13,6 +13,9 @@ export function Footer() {
     { href: "/schedule", label: t.nav.schedule },
     { href: "/roster", label: t.nav.roster },
     { href: "/academy", label: t.nav.academy },
+    { href: "/minibasket", label: t.nav.minibasket },
+    { href: "/history", label: t.nav.history },
+    { href: "/sponsors", label: t.nav.sponsors },
     { href: "/contact", label: t.nav.contact },
     { href: "/shop", label: t.nav.shop },
   ];

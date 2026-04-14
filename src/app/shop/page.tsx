@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/animated-section";
+import { ProductImage } from "@/components/product-image";
 
 export const metadata: Metadata = {
   title: "Фан Шоп | Борец Баскет",
@@ -96,51 +97,7 @@ export default function ShopPage() {
               <AnimatedSection key={product.name} delay={i * 0.07}>
                 <div className="group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-white/5 transition-colors hover:border-brand-red/40">
                   {/* Image */}
-                  <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-brand-black">
-                    {product.image ? (
-                      <>
-                        <Image
-                          src={product.image}
-                          alt={product.name}
-                          fill
-                          className={`object-cover transition-all duration-500 ${product.imageAlt ? "group-hover:opacity-0" : "group-hover:scale-105"}`}
-                        />
-                        {product.imageAlt && (
-                          <Image
-                            src={product.imageAlt}
-                            alt={`${product.name} — друг агол`}
-                            fill
-                            className="object-cover opacity-0 transition-all duration-500 group-hover:opacity-100"
-                          />
-                        )}
-                      </>
-                    ) : (
-                      <div className="flex h-full flex-col items-center justify-center gap-3 text-white/15">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-12 w-12"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth={1}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                          />
-                        </svg>
-                        <span className="font-body text-xs uppercase tracking-widest">
-                          Фото наскоро
-                        </span>
-                      </div>
-                    )}
-                    {product.tag && (
-                      <span className="absolute left-3 top-3 rounded-full bg-brand-red px-2.5 py-1 font-body text-[10px] font-semibold uppercase tracking-wider text-white">
-                        {product.tag}
-                      </span>
-                    )}
-                  </div>
+                  <ProductImage product={product} />
 
                   {/* Info */}
                   <div className="flex flex-1 flex-col p-5">

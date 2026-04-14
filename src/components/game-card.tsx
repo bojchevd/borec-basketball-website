@@ -1,6 +1,7 @@
 import { formatGameDate } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import type { Game } from "@/lib/sanity/types";
+import { GameShare } from "@/components/game-share";
 import { getTranslations } from "@/lib/i18n";
 
 export function GameCard({ game }: { game: Game }) {
@@ -30,6 +31,7 @@ export function GameCard({ game }: { game: Game }) {
           </div>
         </div>
       )}
+      <GameShare text={`Борец Баскет ${game.result ? game.result + " " : ""}${game.homeAway === "home" ? "vs" : "@"} ${game.opponent} · ${day} ${month}`} />
       {game.youtubeUrl && (
         <a
           href={game.youtubeUrl}

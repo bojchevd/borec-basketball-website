@@ -8,6 +8,7 @@ import type { Post } from "@/lib/sanity/types";
 import { urlFor } from "@/lib/sanity/image";
 import { formatPostDate } from "@/lib/utils";
 import { PortableText } from "@/components/portable-text";
+import { ShareButtons } from "@/components/share-buttons";
 import { getTranslations } from "@/lib/i18n";
 
 export const revalidate = 60;
@@ -46,6 +47,9 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         </div>
       )}
       <div className="mt-8"><PortableText value={post.body} /></div>
+      <div className="mt-12 border-t border-white/10 pt-6">
+        <ShareButtons url={`/news/${post.slug.current}`} title={post.title} />
+      </div>
     </article>
   );
 }
