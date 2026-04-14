@@ -3,6 +3,7 @@ import { rogLyonsType, poppins } from "@/lib/fonts";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { I18nProvider } from "@/lib/i18n/provider";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navbar />
           <main className="pt-16">{children}</main>
           <Footer />
+          <Analytics />
         </I18nProvider>
       </body>
     </html>
