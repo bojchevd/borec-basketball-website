@@ -2,11 +2,15 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { socialLinks } from "@/data/social-links";
 import { useI18n } from "@/lib/i18n/provider";
 
 export function Footer() {
   const { t } = useI18n();
+  const pathname = usePathname();
+
+  if (pathname === "/upis") return null;
 
   const footerLinks = [
     { href: "/news", label: t.nav.news },
