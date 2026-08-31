@@ -3,12 +3,13 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/animated-section";
 import { LightboxImage } from "@/components/lightbox";
+import { MinibasketSignupForm } from "@/components/minibasket-signup-form";
 
 
 export const metadata: Metadata = {
   title: "Минибаскет | Борец Баскет",
   description:
-    "Борец Минибаскет — кошарка за деца од 7–12 години во Велес, Македонија. Секој вторник и четврток во Сала Васил Главинов.",
+    "Борец Минибаскет — кошарка за деца од 5–12 години во Велес, Македонија. Секој вторник и четврток во Сала Васил Главинов.",
 };
 
 const benefits = [
@@ -61,7 +62,7 @@ export default function МинибаскетPage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-4">
           <p className="mb-3 font-body text-sm uppercase tracking-widest text-brand-gold">
-            Борец Баскет · Велес · Возраст 7–12
+            Борец Баскет · Велес · Возраст 5–12
           </p>
           <h1 className="font-heading text-[7vw] sm:text-5xl uppercase leading-none text-white md:text-8xl">
             Мини
@@ -74,40 +75,84 @@ export default function МинибаскетPage() {
         </div>
       </section>
 
-      {/* ─── Schedule & Location Card ─── */}
+      {/* ─── УПИС ─── */}
       <AnimatedSection>
-        <section className="mx-auto max-w-7xl px-4 py-20">
-          <div className="grid gap-6 md:grid-cols-3">
-            {/* Schedule */}
-            <div className="rounded-lg border border-brand-gold/20 bg-brand-gold/5 p-6 md:col-span-2">
-              <p className="mb-1 font-body text-xs uppercase tracking-widest text-brand-gold">
-                Распоред
+        <section id="upis" className="mx-auto max-w-7xl px-4 py-20">
+          <div className="mb-12 text-center">
+            <p className="mb-2 font-body text-sm uppercase tracking-widest text-brand-gold">
+              Нова сезона
+            </p>
+            <h2 className="font-heading text-4xl uppercase text-white md:text-5xl">
+              <span className="text-brand-gold">Упис</span> на Минибаскет
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {/* Main message */}
+            <div className="rounded-lg border border-brand-gold/20 bg-brand-gold/5 p-6 lg:col-span-2">
+              <p className="text-lg leading-relaxed text-white/80">
+                Ако сакаш преку забава и игра со врсниците да ги научиш основите
+                на кошаркарската игра, те чекаме на упис во новата сезона!
               </p>
-              <h2 className="mb-4 font-heading text-3xl text-white">
-                Секој вторник и четврток
-              </h2>
-              <p className="text-white/60 leading-relaxed">
-                Секој вторник и четврток од 20:00 ч. Доволно за градење здрави
-                навики и учење на основите на кошарката.
+              <div className="mt-4 inline-block rounded-md bg-brand-gold/10 border border-brand-gold/30 px-4 py-2">
+                <p className="text-sm font-medium text-brand-gold">
+                  Охрабрете се да дојдете на пробен тренинг, истиот е бесплатен!
+                </p>
+              </div>
+            </div>
+
+            {/* When & where */}
+            <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+              <p className="mb-1 font-body text-xs uppercase tracking-widest text-brand-gold">
+                Кога и каде?
+              </p>
+              <p className="text-sm leading-relaxed text-white/60">
+                Уписот ќе се врши за време на тренинзите во спортската сала во
+                ООУ „Васил Главинов" — секој вторник и четврток од 20:00–21:00ч.
+                Групите ќе се формираат и комплетираат во текот на месец септември.
               </p>
             </div>
 
-            {/* Location */}
-            <div className="rounded-lg border border-white/10 bg-white/5 p-6">
-              <p className="mb-1 font-body text-xs uppercase tracking-widest text-white/40">
-                Локација
+            {/* New location */}
+            <div className="rounded-lg border border-brand-gold/20 bg-brand-gold/5 p-6">
+              <p className="mb-1 font-body text-xs uppercase tracking-widest text-brand-gold">
+                Нови термини
               </p>
-              <h3 className="mb-2 font-heading text-xl text-white">
-                Сала Васил Главинов
-              </h3>
-              <p className="text-sm text-white/50 leading-relaxed">
-                Велес
+              <p className="text-sm leading-relaxed text-white/60">
+                СУПЕР информација за сите Вас, особено за сите деца на кои салата
+                им е подалеку — наскоро започнуваме со тренинзи и во СОУ Гимназија
+                „Кочо Рацин"!
               </p>
-              <div className="mt-4 h-px w-full bg-white/10" />
-              <p className="mt-4 text-sm text-white/40">
-                Салата е централно лоцирана и лесно достапна од сите
-                делови на Велес.
+            </div>
+
+            {/* Contact */}
+            <div className="rounded-lg border border-white/10 bg-white/5 p-6 lg:col-span-3">
+              <p className="mb-3 font-body text-xs uppercase tracking-widest text-brand-gold">
+                Контакт и инфо
               </p>
+              <div className="grid gap-3 sm:grid-cols-3">
+                <div className="flex items-center justify-between rounded-md border border-white/10 bg-white/5 px-4 py-3">
+                  <div>
+                    <p className="text-sm font-medium text-white">Тренер Васе</p>
+                    <a href="tel:072306635" className="text-sm text-white/50 hover:text-brand-gold transition-colors">072/306-635</a>
+                  </div>
+                  <a href="viber://chat?number=%2B38972306635" className="inline-flex items-center rounded-full bg-[#7360f2]/15 px-2.5 py-1 text-xs font-medium text-[#7360f2] hover:bg-[#7360f2]/25 transition-colors">Viber</a>
+                </div>
+                <div className="flex items-center justify-between rounded-md border border-white/10 bg-white/5 px-4 py-3">
+                  <div>
+                    <p className="text-sm font-medium text-white">Тренер Аце</p>
+                    <a href="tel:076213975" className="text-sm text-white/50 hover:text-brand-gold transition-colors">076/213-975</a>
+                  </div>
+                  <a href="viber://chat?number=%2B38976213975" className="inline-flex items-center rounded-full bg-[#7360f2]/15 px-2.5 py-1 text-xs font-medium text-[#7360f2] hover:bg-[#7360f2]/25 transition-colors">Viber</a>
+                </div>
+                <div className="flex items-center justify-between rounded-md border border-white/10 bg-white/5 px-4 py-3">
+                  <div>
+                    <p className="text-sm font-medium text-white">Тренер Ане</p>
+                    <a href="tel:078245559" className="text-sm text-white/50 hover:text-brand-gold transition-colors">078/245-559</a>
+                  </div>
+                  <a href="viber://chat?number=%2B38978245559" className="inline-flex items-center rounded-full bg-[#7360f2]/15 px-2.5 py-1 text-xs font-medium text-[#7360f2] hover:bg-[#7360f2]/25 transition-colors">Viber</a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -133,16 +178,14 @@ export default function МинибаскетPage() {
               </h2>
               <p>
                 Борец Минибаскет е влезната точка во нашиот целосен пат за
-                развој на играчи. Децата од 7 до 12 години се запознаваат со
+                развој на играчи. Децата од 5 до 12 години се запознаваат со
                 кошарката на начин кој приоритизира уживање и љубопитност
                 прво, а техничка вештина второ.
               </p>
               <p>
                 Нашите тренери се искусни во работа со мали деца и
                 разбираат дека на оваа возраст, да дојдеш со насмевка е
-                најважното нешто. Сесиите се живи, структурирани и
-                секогаш завршуваат со натпревар — затоа што ништо не е подобро
-                од вистинската игра.
+                најважното нешто.
               </p>
               <p>
                 Најдобрите играчи на Академијата во нашата историја поминале
@@ -180,6 +223,18 @@ export default function МинибаскетPage() {
                 </div>
               </AnimatedSection>
             ))}
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* ─── Signup Form ─── */}
+      <AnimatedSection delay={0.1}>
+        <section className="mx-auto max-w-7xl px-4 py-20 border-t border-white/10">
+          <div className="mx-auto max-w-3xl rounded-lg border border-white/10 bg-white/5 p-6 md:p-10">
+            <h3 className="mb-6 text-center font-heading text-2xl uppercase text-white">
+              Формулар за <span className="text-brand-gold">пријава</span>
+            </h3>
+            <MinibasketSignupForm />
           </div>
         </section>
       </AnimatedSection>
@@ -276,8 +331,8 @@ export default function МинибаскетPage() {
 
             <div className="space-y-4">
               {[
-                { q: "На која возраст може да почне моето дете?", a: "Од 7 години. Работиме со деца до 12 години во Минибаскет програмата." },
-                { q: "Дали треба однапред да се пријавам?", a: "Да. Контактирајте нè преку формуларот подолу и ќе ви потврдиме достапност и детали за термините." },
+                { q: "На која возраст може да почне моето дете?", a: "Од 5 години. Работиме со деца до 12 години во Минибаскет програмата." },
+                { q: "Дали треба однапред да се пријавам?", a: "Да. Контактирајте нè преку формуларот подолу или на некој од телефонските броеви и ќе ви потврдиме достапност и детали за термините." },
                 { q: "Дали има членарина?", a: "Има скромен месечен членски придонес. Деталите се обезбедуваат при регистрација." },
                 { q: "Што ако моето дете пропушти тренинг?", a: "Нема проблем — животот се случува. Редовното доаѓање се поттикнува, но не е строго задолжително на Минибаскет ниво." },
               ].map((item) => (
