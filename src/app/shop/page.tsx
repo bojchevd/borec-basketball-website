@@ -45,14 +45,14 @@ const products: Product[] = [
     imageAlt: "/merch/mug_alt.jpg",
   },
   {
-    name: "Домашен дрес 25/26",
+    name: "Домашен дрес",
     subtitle: "Официјален натпреварувачки дрес — домашен",
     price: "Побарај цена",
     image: "/merch/jersey_home.png",
     tag: "Нов",
   },
   {
-    name: "Гостински дрес 25/26",
+    name: "Гостински дрес",
     subtitle: "Официјален натпреварувачки дрес — гостински",
     price: "Побарај цена",
     image: "/merch/jersey_away.png",

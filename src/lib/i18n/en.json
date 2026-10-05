@@ -12,7 +12,7 @@
   },
   "home": {
     "established": "Est. 2009 · Veles",
-    "league": "First League · Group B · Season 2025/26",
+    "league": "First League · Group B · Season 2026/27",
     "schedule": "Schedule",
     "roster": "Roster",
     "nextGame": "Next Game",
@@ -45,7 +45,8 @@
   },
   "roster": {
     "title": "Roster",
-    "coachingStaff": "Coaching Staff"
+    "coachingStaff": "Coaching Staff",
+    "pastSeason": "Archive — roster from season"
   },
   "history": {
     "title": "History"

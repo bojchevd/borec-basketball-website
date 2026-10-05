@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { client } from "@/lib/sanity/client";
 import { POSTS_QUERY } from "@/lib/sanity/queries";
 import type { Post } from "@/lib/sanity/types";
+import { pastSeasons } from "@/data/rosters";
 
 const BASE_URL = "https://borecbasketball.com";
 
@@ -19,5 +20,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(post.publishedAt),
   }));
 
-  return [...staticPages, ...postPages];
+  const rosterArchivePages = pastSeasons.map((s) => ({
+    url: `${BASE_URL}/roster/${s.slug}`,
+    lastModified: new Date(),
+  }));
+
+  return [...staticPages, ...postPages, ...rosterArchivePages];
 }
