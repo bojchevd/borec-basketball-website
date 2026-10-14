@@ -66,151 +66,6 @@ export default function HistoryPage() {
         </div>
       </AnimatedSection>
 
-      {/* ── Историја ────────────────────────────────────────────── */}
-      <AnimatedSection>
-        <div className="space-y-6 text-white/75 leading-relaxed mt-16">
-          <h2 className="font-heading text-3xl text-white">Историја</h2>
-
-          {/* 2010/11 */}
-          <div className="relative pl-5 border-l-2 border-brand-red/40">
-            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red border-2 border-black" />
-            <h3 className="font-heading text-xl text-white mb-1">
-              2010/11 — Дебитантска сезона
-            </h3>
-            <p>
-              Во сезоната 2010/11, клубот за прв пат пријавил сениорска
-              екипа — во Третата лига. Почетокот беше одличен: второто место
-              на крајот на сезоната им донесе промоција во Втората лига, и тоа
-              само во првиот обид.
-            </p>
-          </div>
-
-          {/* 2011/12 */}
-          <div className="relative pl-5 border-l-2 border-brand-red/40">
-            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red/60 border-2 border-black" />
-            <h3 className="font-heading text-xl text-white mb-1">
-              2011/12 — Втора лига
-            </h3>
-            <p>
-              Дебитирајќи на повисоко ниво, Борец Баскет ја заврши сезоната
-              на 7-мо место во Втората лига — достоен резултат за новодојденец
-              на тоа ниво.
-            </p>
-          </div>
-
-          {/* 2012/13 */}
-          <div className="relative pl-5 border-l-2 border-white/15">
-            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-white/20 border-2 border-black" />
-            <h3 className="font-heading text-xl text-white mb-1">
-              2012/13 — Пауза
-            </h3>
-            <p>
-              Сезоната 2012/13 клубот не настапуваше на натпреварувања, но
-              работата зад сцената продолжи.
-            </p>
-          </div>
-
-          {/* 2013/14 */}
-          <div className="relative pl-5 border-l-2 border-brand-red/40">
-            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red border-2 border-black" />
-            <h3 className="font-heading text-xl text-white mb-1">
-              2013/14 — Вицешампион на Трета лига
-            </h3>
-            <p>
-              По паузата, клубот се врати со одлучност. Борец Баскет ја
-              заврши сезоната 2013/14 на второ место во Третата лига —
-              вицешампион — и повторно обезбеди промоција во Втората лига.
-            </p>
-          </div>
-
-          {/* 2014/15 */}
-          <div className="relative pl-5 border-l-2 border-brand-red/40">
-            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red/60 border-2 border-black" />
-            <h3 className="font-heading text-xl text-white mb-1">
-              2014/15 — Изедначување на врвот
-            </h3>
-            <p>
-              Амбициите растеа. Клубот заврши со ист број бодови како уште
-              две екипи на второто место, но поради полошата меѓусебна
-              разлика — Борец Баскет паѓа на 4-то место.
-            </p>
-          </div>
-
-          {/* 2015/16 */}
-          <div className="relative pl-5 border-l-2 border-white/15">
-            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-white/20 border-2 border-black" />
-            <h3 className="font-heading text-xl text-white mb-1">
-              2015/16 — Одбиена промоција
-            </h3>
-            <p>
-              Првакот Т-Баскет, иако беше унапреден во Првата лига, се
-              откажа поради ненаоѓање на соодветна сала. На Борец Баскет му
-              следуваше покана за учество, но исто така поради ненаоѓање на
-              соодветна сала, мораше да одбие. Дополнително, клубот се откажа
-              и од Втората лига и не пријави екипа за натпреварување.
-            </p>
-          </div>
-
-          {/* 2016/17 */}
-          <div className="relative pl-5 border-l-2 border-white/15">
-            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-white/20 border-2 border-black" />
-            <h3 className="font-heading text-xl text-white mb-1">
-              2016/17 — „Борец Еуробрик"
-            </h3>
-            <p>
-              Во оваа сезона клубот настапуваше под спонзорското
-              име <em>Борец Еуробрик</em>. Екипата се откажа после двете
-              третини од сезоната и заврши на последното седмо место на
-              табелата.
-            </p>
-          </div>
-
-          {/* 2017/18 */}
-          <div className="relative pl-5 border-l-2 border-brand-red/40">
-            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red/60 border-2 border-black" />
-            <h3 className="font-heading text-xl text-white mb-1">
-              2017/18 — Враќање во Трета лига
-            </h3>
-            <p>
-              Клубот продолжи да гради и да ги решава интерните прашања,
-              настапувајќи повторно во Третата лига.
-            </p>
-          </div>
-
-          {/* 2018/19 */}
-          <div className="relative pl-5 border-l-2 border-brand-red/40">
-            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red/60 border-2 border-black" />
-            <h3 className="font-heading text-xl text-white mb-1">
-              2018/19 — Нов формат на лигата
-            </h3>
-            <p>
-              Втората лига доби нова структура — подели се на Источна и
-              Западна група. Борец Баскет, настапувајќи во Источната група, ја
-              заврши сезоната на 5-то место — солиден резултат во
-              реорганизираниот натпревар.
-            </p>
-          </div>
-
-          {/* 2019/20 */}
-          <div className="relative pl-5 border-l-2 border-brand-red/40">
-            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red border-2 border-black" />
-            <h3 className="font-heading text-xl text-white mb-1">
-              2019/20 — КОВИД прекин
-            </h3>
-            <p>
-              На полусезона, клубот доби звучно појачување — поранешниот
-              сениорски репрезентативец{" "}
-              <strong className="text-white">Владимир Брчков</strong>, чие
-              искуство и квалитет ги подигна очекувањата на целиот клуб.
-              Борец Баскет атакуваше на 4-тата позиција кога пандемијата
-              КОВИД-19 ги запре сите натпреварувања по 13. коло. Лигата беше
-              суспендирана, а сезоната остана незавршена — вистинска
-              неправда за еден клуб во добра форма.
-            </p>
-          </div>
-        </div>
-      </AnimatedSection>
-
       {/* ── Сезона 2025/26 ──────────────────────────────────────── */}
       <AnimatedSection>
         <div className="space-y-5 text-white/75 leading-relaxed mt-16">
@@ -283,6 +138,151 @@ export default function HistoryPage() {
             со странски засилувања беше доказ дека стрпливоста и вложувањето во
             клубот даваат плодови. Велес повторно има кошарка на врвот.
           </p>
+        </div>
+      </AnimatedSection>
+
+      {/* ── Историја ────────────────────────────────────────────── */}
+      <AnimatedSection>
+        <div className="space-y-6 text-white/75 leading-relaxed mt-16">
+          <h2 className="font-heading text-3xl text-white">Историја</h2>
+
+          {/* 2019/20 */}
+          <div className="relative pl-5 border-l-2 border-brand-red/40">
+            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red border-2 border-black" />
+            <h3 className="font-heading text-xl text-white mb-1">
+              2019/20 — КОВИД прекин
+            </h3>
+            <p>
+              На полусезона, клубот доби звучно појачување — поранешниот
+              сениорски репрезентативец{" "}
+              <strong className="text-white">Владимир Брчков</strong>, чие
+              искуство и квалитет ги подигна очекувањата на целиот клуб.
+              Борец Баскет атакуваше на 4-тата позиција кога пандемијата
+              КОВИД-19 ги запре сите натпреварувања по 13. коло. Лигата беше
+              суспендирана, а сезоната остана незавршена — вистинска
+              неправда за еден клуб во добра форма.
+            </p>
+          </div>
+
+          {/* 2018/19 */}
+          <div className="relative pl-5 border-l-2 border-brand-red/40">
+            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red/60 border-2 border-black" />
+            <h3 className="font-heading text-xl text-white mb-1">
+              2018/19 — Нов формат на лигата
+            </h3>
+            <p>
+              Втората лига доби нова структура — подели се на Источна и
+              Западна група. Борец Баскет, настапувајќи во Источната група, ја
+              заврши сезоната на 5-то место — солиден резултат во
+              реорганизираниот натпревар.
+            </p>
+          </div>
+
+          {/* 2017/18 */}
+          <div className="relative pl-5 border-l-2 border-brand-red/40">
+            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red/60 border-2 border-black" />
+            <h3 className="font-heading text-xl text-white mb-1">
+              2017/18 — Враќање во Трета лига
+            </h3>
+            <p>
+              Клубот продолжи да гради и да ги решава интерните прашања,
+              настапувајќи повторно во Третата лига.
+            </p>
+          </div>
+
+          {/* 2016/17 */}
+          <div className="relative pl-5 border-l-2 border-white/15">
+            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-white/20 border-2 border-black" />
+            <h3 className="font-heading text-xl text-white mb-1">
+              2016/17 — „Борец Еуробрик"
+            </h3>
+            <p>
+              Во оваа сезона клубот настапуваше под спонзорското
+              име <em>Борец Еуробрик</em>. Екипата се откажа после двете
+              третини од сезоната и заврши на последното седмо место на
+              табелата.
+            </p>
+          </div>
+
+          {/* 2015/16 */}
+          <div className="relative pl-5 border-l-2 border-white/15">
+            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-white/20 border-2 border-black" />
+            <h3 className="font-heading text-xl text-white mb-1">
+              2015/16 — Одбиена промоција
+            </h3>
+            <p>
+              Првакот Т-Баскет, иако беше унапреден во Првата лига, се
+              откажа поради ненаоѓање на соодветна сала. На Борец Баскет му
+              следуваше покана за учество, но исто така поради ненаоѓање на
+              соодветна сала, мораше да одбие. Дополнително, клубот се откажа
+              и од Втората лига и не пријави екипа за натпреварување.
+            </p>
+          </div>
+
+          {/* 2014/15 */}
+          <div className="relative pl-5 border-l-2 border-brand-red/40">
+            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red/60 border-2 border-black" />
+            <h3 className="font-heading text-xl text-white mb-1">
+              2014/15 — Изедначување на врвот
+            </h3>
+            <p>
+              Амбициите растеа. Клубот заврши со ист број бодови како уште
+              две екипи на второто место, но поради полошата меѓусебна
+              разлика — Борец Баскет паѓа на 4-то место.
+            </p>
+          </div>
+
+          {/* 2013/14 */}
+          <div className="relative pl-5 border-l-2 border-brand-red/40">
+            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red border-2 border-black" />
+            <h3 className="font-heading text-xl text-white mb-1">
+              2013/14 — Вицешампион на Трета лига
+            </h3>
+            <p>
+              По паузата, клубот се врати со одлучност. Борец Баскет ја
+              заврши сезоната 2013/14 на второ место во Третата лига —
+              вицешампион — и повторно обезбеди промоција во Втората лига.
+            </p>
+          </div>
+
+          {/* 2012/13 */}
+          <div className="relative pl-5 border-l-2 border-white/15">
+            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-white/20 border-2 border-black" />
+            <h3 className="font-heading text-xl text-white mb-1">
+              2012/13 — Пауза
+            </h3>
+            <p>
+              Сезоната 2012/13 клубот не настапуваше на натпреварувања, но
+              работата зад сцената продолжи.
+            </p>
+          </div>
+
+          {/* 2011/12 */}
+          <div className="relative pl-5 border-l-2 border-brand-red/40">
+            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red/60 border-2 border-black" />
+            <h3 className="font-heading text-xl text-white mb-1">
+              2011/12 — Втора лига
+            </h3>
+            <p>
+              Дебитирајќи на повисоко ниво, Борец Баскет ја заврши сезоната
+              на 7-мо место во Втората лига — достоен резултат за новодојденец
+              на тоа ниво.
+            </p>
+          </div>
+
+          {/* 2010/11 */}
+          <div className="relative pl-5 border-l-2 border-brand-red/40">
+            <span className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-brand-red border-2 border-black" />
+            <h3 className="font-heading text-xl text-white mb-1">
+              2010/11 — Дебитантска сезона
+            </h3>
+            <p>
+              Во сезоната 2010/11, клубот за прв пат пријавил сениорска
+              екипа — во Третата лига. Почетокот беше одличен: второто место
+              на крајот на сезоната им донесе промоција во Втората лига, и тоа
+              само во првиот обид.
+            </p>
+          </div>
         </div>
       </AnimatedSection>
     </section>
