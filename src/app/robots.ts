@@ -3,6 +3,6 @@ import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://borecbasketball.com/sitemap.xml",
+    sitemap: "https://borecbasketball.mk/sitemap.xml",
   };
 }

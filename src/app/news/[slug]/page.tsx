@@ -27,7 +27,31 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = await client.fetch<Post>(POST_BY_SLUG_QUERY, { slug }).catch(() => null);
   if (!post) return { title: "Објавата не е пронајдена" };
-  return { title: post.title, description: post.excerpt };
+  const url = `/news/${post.slug.current}`;
+  const images = post.coverImage
+    ? [{ url: urlFor(post.coverImage).width(1200).height(630).fit("crop").format("jpg").url(), width: 1200, height: 630, alt: post.title }]
+    : undefined;
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: { canonical: url },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url,
+      siteName: "Борец Баскет",
+      locale: "mk_MK",
+      type: "article",
+      publishedTime: post.publishedAt,
+      images,
+    },
+    twitter: {
+      card: images ? "summary_large_image" : "summary",
+      title: post.title,
+      description: post.excerpt,
+      images: images?.map((i) => i.url),
+    },
+  };
 }
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {

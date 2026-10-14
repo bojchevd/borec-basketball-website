@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://borecbasketball.mk"),
   title: {
     default: "Борец Баскет | Borec Basketball",
     template: "%s | Борец Баскет",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Борец Баскет | Borec Basketball",
     description: "Официјална веб-страница на КК Борец Баскет од Велес, Македонија.",
-    url: "https://borecbasketball.com",
+    url: "https://borecbasketball.mk",
     siteName: "Борец Баскет",
     locale: "mk_MK",
     type: "website",

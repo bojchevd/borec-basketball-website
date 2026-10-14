@@ -4,7 +4,7 @@ import { POSTS_QUERY } from "@/lib/sanity/queries";
 import type { Post } from "@/lib/sanity/types";
 import { pastSeasons } from "@/data/rosters";
 
-const BASE_URL = "https://borecbasketball.com";
+const BASE_URL = "https://borecbasketball.mk";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let posts: Post[] = [];
