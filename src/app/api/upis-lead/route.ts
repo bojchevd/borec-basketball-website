@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { ANY_HALL } from "@/data/minibasket-trainings";
 
 function row(label: string, value: string) {
   return `<tr><td style="padding:6px 12px;color:#999;font-size:13px;white-space:nowrap">${label}</td><td style="padding:6px 12px;color:#fff;font-size:13px">${value}</td></tr>`;
@@ -8,7 +9,7 @@ function row(label: string, value: string) {
 export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
-    const { childName, childAge, parentName, phone, email, notifications } =
+    const { childName, childAge, parentName, phone, email, hall, notifications } =
       await request.json();
 
     if (!childName || !childAge || !parentName || !phone || !email) {
@@ -33,6 +34,7 @@ export async function POST(request: Request) {
       <tr><td style="padding:10px 12px;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#C9A635;border-bottom:1px solid #333">Дете</td><td style="border-bottom:1px solid #333"></td></tr>
       ${row("Име", childName)}
       ${row("Возраст", `${childAge} години`)}
+      ${row("Сала", hall || "–")}
     </table>
 
     <table width="100%" style="margin:20px 0">
@@ -60,7 +62,7 @@ export async function POST(request: Request) {
       from: "Borec Website <onboarding@resend.dev>",
       to: process.env.CONTACT_EMAIL!,
       replyTo: email,
-      subject: `Минибаскет lead: ${childName} (${childAge} год.)`,
+      subject: `Минибаскет lead: ${childName} (${childAge} год.)${hall && hall !== ANY_HALL ? ` · ${hall}` : ""}`,
       html,
     });
 

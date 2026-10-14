@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { HallChoice } from "@/components/hall-choice";
 
 type YesNo = "no" | "yes";
 
@@ -32,6 +33,7 @@ export function MinibasketSignupForm() {
       childPhone: fd.get("childPhone"),
       school: fd.get("school"),
       grade: fd.get("grade"),
+      hall: fd.get("hall"),
       parentName: fd.get("parentName"),
       parentEmail: fd.get("parentEmail"),
       parentPhone: fd.get("parentPhone"),
@@ -114,6 +116,9 @@ export function MinibasketSignupForm() {
             <Label htmlFor="grade" className="text-white/70">Одделение<RequiredMark /></Label>
             <Input id="grade" name="grade" required className={inputClass} placeholder="пр. 3-то" />
           </div>
+        </div>
+        <div className="mt-4">
+          <HallChoice />
         </div>
       </div>
 

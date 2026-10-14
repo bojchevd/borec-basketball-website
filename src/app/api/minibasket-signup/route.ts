@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { ANY_HALL } from "@/data/minibasket-trainings";
 
 function row(label: string, value: string) {
   return `<tr><td style="padding:6px 12px;color:#999;font-size:13px;white-space:nowrap">${label}</td><td style="padding:6px 12px;color:#fff;font-size:13px">${value}</td></tr>`;
@@ -24,6 +25,7 @@ export async function POST(request: Request) {
       childPhone,
       school,
       grade,
+      hall,
       parentName,
       parentEmail,
       parentPhone,
@@ -58,7 +60,8 @@ export async function POST(request: Request) {
         row("Пол", gender) +
         row("Тел. број", childPhone || "–") +
         row("Училиште", school) +
-        row("Одделение", grade)
+        row("Одделение", grade) +
+        row("Сала", hall || "–")
       )}
 
       ${section("Родител / Старател",
@@ -100,7 +103,7 @@ export async function POST(request: Request) {
       from: "Borec Website <onboarding@resend.dev>",
       to: process.env.CONTACT_EMAIL!,
       replyTo: parentEmail,
-      subject: `Минибаскет упис: ${childName}`,
+      subject: `Минибаскет упис: ${childName}${hall && hall !== ANY_HALL ? ` · ${hall}` : ""}`,
       html,
     });
 

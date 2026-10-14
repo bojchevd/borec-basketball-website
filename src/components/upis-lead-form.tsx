@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { HallChoice } from "@/components/hall-choice";
 
 export function UpisLeadForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -15,6 +16,7 @@ export function UpisLeadForm() {
       parentName: fd.get("parentName"),
       phone: fd.get("phone"),
       email: fd.get("email"),
+      hall: fd.get("hall"),
       notifications: fd.get("notifications") === "on" ? "yes" : "no",
     };
     try {
@@ -86,6 +88,8 @@ export function UpisLeadForm() {
           placeholder="Е-маил адреса"
         />
       </div>
+
+      <HallChoice />
 
       <label className="flex items-start gap-2.5 cursor-pointer group">
         <input
