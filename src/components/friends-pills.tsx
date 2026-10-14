@@ -1,26 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-
-const friends = [
-  "Тета Коп",
-  "Пододекор",
-  "Фурна Којник",
-  "Escape Cafe",
-  "Пескара Вел",
-  "Џуниор Парк",
-  "Collective",
-  "ДД Транс",
-  "Дисконт Риле",
-  "АЦ Електрик",
-  "ИВА 2003",
-  "Слот Клуб 77777",
-  "Енмон",
-  "Ricco",
-  "Минерали Метали",
-  "Италеуромак",
-  "Општина Велес",
-];
+import { partners as friends } from "@/data/sponsors";
 
 function shuffle<T>(arr: T[]): T[] {
   const copy = [...arr];

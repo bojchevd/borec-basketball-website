@@ -1,24 +1,6 @@
 "use client";
 
-const friends = [
-  "Тета Коп",
-  "Пододекор",
-  "Фурна Којник",
-  "Escape Cafe",
-  "Пескара Вел",
-  "Џуниор Парк",
-  "Collective",
-  "ДД Транс",
-  "Дисконт Риле",
-  "АЦ Електрик",
-  "ИВА 2003",
-  "Слот Клуб 77777",
-  "Енмон",
-  "Ricco",
-  "Минерали Метали",
-  "Италеуромак",
-  "Општина Велес",
-];
+import { partners as friends } from "@/data/sponsors";
 
 export function FriendsMarquee() {
   const row1 = friends.slice(0, Math.ceil(friends.length / 2));

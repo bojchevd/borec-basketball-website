@@ -5,6 +5,7 @@ import { LATEST_POSTS_QUERY, NEXT_GAMES_QUERY } from "@/lib/sanity/queries";
 import type { Post, Game } from "@/lib/sanity/types";
 import { GameCard } from "@/components/game-card";
 import { FriendsMarquee } from "@/components/friends-marquee";
+import { GoldenSponsor } from "@/components/golden-sponsor";
 import { Marquee } from "@/components/marquee";
 import { AnimatedSection } from "@/components/animated-section";
 import { NewsCard } from "@/components/news-card";
@@ -307,6 +308,7 @@ export default async function Home() {
       {/* Sponsors */}
       <AnimatedSection>
         <section className="mx-auto max-w-5xl px-4 py-20">
+          <GoldenSponsor />
           <h2 className="mb-12 text-center font-heading text-3xl uppercase text-white/30">
             Пријатели на клубот
           </h2>

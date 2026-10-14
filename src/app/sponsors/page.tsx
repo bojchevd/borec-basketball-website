@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/animated-section";
 import { FriendsPills } from "@/components/friends-pills";
+import { GoldenSponsor } from "@/components/golden-sponsor";
 import { getTranslations } from "@/lib/i18n";
 
 export const metadata: Metadata = { title: "Пријатели | Борец Баскет", description: "Пријатели на клубот Борец Баскет." };
@@ -13,6 +14,9 @@ export default function SponsorsPage() {
         Пријатели <span className="text-brand-red">на клубот</span>
       </h1>
       <AnimatedSection>
+        <GoldenSponsor />
+      </AnimatedSection>
+      <AnimatedSection delay={0.1}>
         <FriendsPills />
       </AnimatedSection>
       <AnimatedSection delay={0.2}>
