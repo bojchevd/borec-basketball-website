@@ -83,7 +83,7 @@ export function RosterContent({
         <>
           <div className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {roster.map((player: Player, i: number) => (
-              <AnimatedSection key={player.number} delay={i * 0.05}>
+              <AnimatedSection key={player.name} delay={i * 0.05}>
                 <PlayerCard player={player} />
               </AnimatedSection>
             ))}

@@ -1,7 +1,9 @@
 export interface Player {
   name: string;
-  number: number;
-  position: string;
+  /** Shirt number — leave out until it's known */
+  number?: number;
+  /** Leave out until it's known */
+  position?: string;
   photo: string;
 }
 
