@@ -8,7 +8,7 @@ import { LightboxImage } from "@/components/lightbox";
 export const metadata: Metadata = {
   title: "Academy | Борец Баскет",
   description:
-    "Борец Кошаркарска Академија — натпреварувачки младински тренинг за играчи од 12–18 години во Велес, Македонија.",
+    "Борец Кошаркарска Академија — натпреварувачки младински тренинг за играчи од 12–20 години во Велес, Македонија.",
 };
 
 const ageGroups = [
@@ -37,8 +37,15 @@ const ageGroups = [
     label: "M-18",
     ages: "до 18 години",
     description:
-      "Последниот чекор пред сениорскиот тим. Играчите тренираат заедно со првиот тим и се оценуваат за промоција во сениорската програма на Борец.",
+      "Највисоко ниво на младинска кошарка. Играчите тренираат со интензитет на сениори и првпат се вклучуваат во тренинзите на првиот тим.",
     highlight: "Елита",
+  },
+  {
+    label: "M-20",
+    ages: "до 20 години",
+    description:
+      "Последниот чекор пред сениорскиот тим. Играчите редовно тренираат и играат со првиот тим и се подготвуваат за полно место во сениорската програма на Борец.",
+    highlight: "Прв тим",
   },
 ];
 
@@ -86,7 +93,7 @@ export default function AcademyPage() {
             <span className="text-brand-red">Академија</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/60">
-            Натпреварувачка младинска кошарка во срцето на Македонија. Четири
+            Натпреварувачка младинска кошарка во срцето на Македонија. Пет
             возрасни групи, една цел — развој на следната генерација играчи на Борец.
           </p>
         </div>
@@ -141,15 +148,15 @@ export default function AcademyPage() {
             </h2>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {ageGroups.map((group, i) => (
               <AnimatedSection key={group.label} delay={i * 0.08}>
                 <div className="flex h-full flex-col rounded-lg border border-white/10 bg-white/5 p-6 hover:border-brand-red/50 transition-colors duration-300">
-                  <div className="mb-4 flex items-start justify-between">
-                    <span className="font-heading text-5xl text-white">
+                  <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
+                    <span className="whitespace-nowrap font-heading text-5xl text-white xl:text-4xl">
                       {group.label}
                     </span>
-                    <span className="mt-1 rounded-full bg-brand-red/10 px-2 py-1 font-body text-xs uppercase tracking-wider text-brand-red">
+                    <span className="mt-1 whitespace-nowrap rounded-full bg-brand-red/10 px-2 py-1 font-body text-xs uppercase tracking-wider text-brand-red">
                       {group.highlight}
                     </span>
                   </div>
@@ -176,13 +183,14 @@ export default function AcademyPage() {
                   Патот на Борец
                 </h2>
                 <p className="mt-3 max-w-lg text-white/80 leading-relaxed">
-                  Минибаскет → M-12 → M-14 → M-16 → M-18 → Сениорски тим. Секој
+                  Минибаскет → M-12 → M-14 → M-16 → M-18 → M-20 → Сениорски тим. Секој
                   чекор е намерен. Секоја сезона гради врз претходната. Така
                   создаваме играчи кои се натпреваруваат на национално ниво.
                 </p>
               </div>
               <div className="flex flex-col items-start gap-2 font-heading text-2xl uppercase text-white/20 md:items-end">
                 <span className="text-white">Сениори</span>
+                <span>M-20</span>
                 <span>M-18</span>
                 <span>M-16</span>
                 <span>M-14</span>
