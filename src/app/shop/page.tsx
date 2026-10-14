@@ -5,7 +5,7 @@ import { AnimatedSection } from "@/components/animated-section";
 import { ProductImage } from "@/components/product-image";
 
 export const metadata: Metadata = {
-  title: "Фан Шоп | Борец Баскет",
+  title: "Фан Шоп",
   description:
     "Официјален мерч на Борец Баскет — дуксери, термоси, шолји и дресови. Нарачај преку телефон или е-пошта.",
 };

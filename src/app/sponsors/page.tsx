@@ -4,7 +4,7 @@ import { FriendsPills } from "@/components/friends-pills";
 import { GoldenSponsor } from "@/components/golden-sponsor";
 import { getTranslations } from "@/lib/i18n";
 
-export const metadata: Metadata = { title: "Спонзори | Борец Баскет", description: "Златен спонзор и пријатели на клубот Борец Баскет." };
+export const metadata: Metadata = { title: "Спонзори", description: "Златен спонзор и пријатели на клубот Борец Баскет." };
 
 export default function SponsorsPage() {
   const t = getTranslations("mk");

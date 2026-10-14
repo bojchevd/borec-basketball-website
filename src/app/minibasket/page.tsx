@@ -8,7 +8,7 @@ import { MinibasketSignupForm } from "@/components/minibasket-signup-form";
 
 
 export const metadata: Metadata = {
-  title: "Минибаскет | Борец Баскет",
+  title: "Минибаскет",
   description:
     "Борец Минибаскет — кошарка за деца од 5–12 години во Велес, Македонија. Тренинзи во ООУ „Васил Главинов“ (вторник и четврток) и СОУ Гимназија „Кочо Рацин“ (среда и петок).",
 };

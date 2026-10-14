@@ -3,7 +3,7 @@ import { getTranslations } from "@/lib/i18n";
 import { currentSeason } from "@/data/rosters";
 import { RosterContent } from "@/components/roster-content";
 
-export const metadata: Metadata = { title: "Roster | Борец Баскет", description: "Meet the Borec Basketball team." };
+export const metadata: Metadata = { title: "Состав", description: "Играчите и стручниот штаб на КК Борец Баскет за тековната сезона." };
 
 export default function RosterPage() {
   const t = getTranslations("mk");

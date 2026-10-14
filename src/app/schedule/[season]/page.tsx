@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ season: s
   const { season: slug } = await params;
   const season = getSeason(slug);
   return {
-    title: `Schedule ${season?.label ?? ""} | Борец Баскет`,
-    description: `Borec Basketball results from the ${season?.label} season.`,
+    title: `Распоред ${season?.label ?? ""}`,
+    description: `Резултати на КК Борец Баскет од сезоната ${season?.label}.`,
   };
 }
 

@@ -3,8 +3,8 @@ import { currentSeason } from "@/data/rosters";
 import { ScheduleContent } from "@/components/schedule-content";
 
 export const metadata: Metadata = {
-  title: "Schedule | Борец Баскет",
-  description: "Borec Basketball game schedule and results.",
+  title: "Распоред",
+  description: "Распоред на натпревари и резултати на КК Борец Баскет.",
 };
 
 export const revalidate = 60;

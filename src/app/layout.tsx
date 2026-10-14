@@ -11,10 +11,10 @@ export const metadata: Metadata = {
     default: "Борец Баскет | Borec Basketball",
     template: "%s | Борец Баскет",
   },
-  description: "Official website of Borec Basketball club from Veles, Macedonia.",
+  description: "Официјална веб-страница на КК Борец Баскет од Велес, Македонија.",
   openGraph: {
     title: "Борец Баскет | Borec Basketball",
-    description: "Official website of Borec Basketball club from Veles, Macedonia.",
+    description: "Официјална веб-страница на КК Борец Баскет од Велес, Македонија.",
     url: "https://borecbasketball.com",
     siteName: "Борец Баскет",
     locale: "mk_MK",

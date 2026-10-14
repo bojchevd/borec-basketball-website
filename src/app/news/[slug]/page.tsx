@@ -26,8 +26,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = await client.fetch<Post>(POST_BY_SLUG_QUERY, { slug }).catch(() => null);
-  if (!post) return { title: "Post Not Found" };
-  return { title: `${post.title} | Борец Баскет`, description: post.excerpt };
+  if (!post) return { title: "Објавата не е пронајдена" };
+  return { title: post.title, description: post.excerpt };
 }
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {

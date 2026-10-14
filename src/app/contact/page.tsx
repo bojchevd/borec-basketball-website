@@ -5,7 +5,7 @@ import { socialLinks } from "@/data/social-links";
 import { getTranslations } from "@/lib/i18n";
 import { parseContactParams } from "@/lib/contact";
 
-export const metadata: Metadata = { title: "Contact | Борец Баскет", description: "Get in touch with Borec Basketball." };
+export const metadata: Metadata = { title: "Контакт", description: "Контактирајте го КК Борец Баскет од Велес — за спонзорство, соработка или прашања." };
 
 export default async function ContactPage({
   searchParams,

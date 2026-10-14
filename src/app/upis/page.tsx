@@ -5,7 +5,7 @@ import { LightboxImage } from "@/components/lightbox";
 import { UpisLeadForm } from "@/components/upis-lead-form";
 
 export const metadata: Metadata = {
-  title: "Упис на Минибаскет | Борец Баскет",
+  title: "Упис на Минибаскет",
   description:
     "Борец Минибаскет — кошарка за деца од 5–12 години во Велес. Пријави се за упис во новата сезона!",
 };

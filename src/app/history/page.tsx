@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/animated-section";
 
 export const metadata: Metadata = {
-  title: "Историја | Борец Баскет",
+  title: "Историја",
   description:
     "Историјата на КК Борец Баскет од Велес — од основањето во 2009 година до денес.",
 };

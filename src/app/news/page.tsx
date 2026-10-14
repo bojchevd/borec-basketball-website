@@ -7,8 +7,8 @@ import { AnimatedSection } from "@/components/animated-section";
 import { getTranslations } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "News | Борец Баскет",
-  description: "Latest news from Borec Basketball club.",
+  title: "Вести",
+  description: "Најнови вести од КК Борец Баскет од Велес.",
 };
 
 export const revalidate = 60;

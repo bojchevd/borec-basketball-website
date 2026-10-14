@@ -6,7 +6,7 @@ import { LightboxImage } from "@/components/lightbox";
 
 
 export const metadata: Metadata = {
-  title: "Academy | Борец Баскет",
+  title: "Академија",
   description:
     "Борец Кошаркарска Академија — натпреварувачки младински тренинг за играчи од 12–20 години во Велес, Македонија.",
 };
