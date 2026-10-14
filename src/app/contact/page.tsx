@@ -3,11 +3,17 @@ import { ContactForm } from "@/components/contact-form";
 import { AnimatedSection } from "@/components/animated-section";
 import { socialLinks } from "@/data/social-links";
 import { getTranslations } from "@/lib/i18n";
+import { parseContactParams } from "@/lib/contact";
 
 export const metadata: Metadata = { title: "Contact | Борец Баскет", description: "Get in touch with Borec Basketball." };
 
-export default function ContactPage() {
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ tip?: string | string[]; tema?: string | string[] }>;
+}) {
   const t = getTranslations("mk");
+  const { type, topic } = parseContactParams(await searchParams);
   return (
     <section className="mx-auto max-w-5xl px-4 py-20">
       <h1 className="mb-12 font-heading text-5xl uppercase text-white md:text-6xl"><span className="text-brand-red">{t.contact.title}</span></h1>
@@ -32,7 +38,7 @@ export default function ContactPage() {
             </div>
           </div>
         </AnimatedSection>
-        <AnimatedSection delay={0.2}><ContactForm /></AnimatedSection>
+        <AnimatedSection delay={0.2}><ContactForm initialType={type} initialTopic={topic} /></AnimatedSection>
       </div>
     </section>
   );

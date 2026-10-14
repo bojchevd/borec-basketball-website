@@ -12,7 +12,7 @@
   },
   "home": {
     "established": "Осн. 2009 · Велес",
-    "league": "Прва Лига · Група Б · Сезона 2026/27",
+    "league": "Прва Лига · Група А · Сезона 2026/27",
     "schedule": "Распоред",
     "roster": "Состав",
     "nextGame": "Следен натпревар",
@@ -97,8 +97,20 @@
     "emailLabel": "Е-пошта",
     "socialLabel": "Социјални мрежи",
     "form": {
+      "typePerson": "Лице",
+      "typeBusiness": "Фирма",
       "name": "Име",
       "namePlaceholder": "Вашето име",
+      "company": "Име на фирма",
+      "companyPlaceholder": "Вашата фирма",
+      "topic": "Тема",
+      "topics": {
+        "sponsorship": "Спонзорство",
+        "donation": "Донација",
+        "advertising": "Реклама",
+        "event": "Настан / Соработка",
+        "other": "Друго"
+      },
       "email": "Е-пошта",
       "emailPlaceholder": "вашата@епошта.com",
       "message": "Порака",

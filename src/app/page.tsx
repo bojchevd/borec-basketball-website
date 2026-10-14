@@ -218,7 +218,7 @@ export default async function Home() {
               {/* Season stats teaser */}
               <div className="mt-4 grid grid-cols-3 gap-3">
                 <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 text-center">
-                  <div className="font-heading text-2xl text-brand-red">0</div>
+                  <div className="font-heading text-2xl text-brand-red">1</div>
                   <div className="mt-1 text-[10px] uppercase tracking-wider text-white/30">
                     {t.home.wins}
                   </div>
@@ -230,7 +230,7 @@ export default async function Home() {
                   </div>
                 </div>
                 <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 text-center">
-                  <div className="font-heading text-2xl text-brand-gold">–</div>
+                  <div className="font-heading text-2xl text-brand-gold">3</div>
                   <div className="mt-1 text-[10px] uppercase tracking-wider text-white/30">
                     Позиција
                   </div>
@@ -259,6 +259,13 @@ export default async function Home() {
               {t.home.allNews}
             </Link>
           </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Golden Sponsor */}
+      <AnimatedSection>
+        <section className="mx-auto max-w-5xl px-4 pb-20">
+          <GoldenSponsor />
         </section>
       </AnimatedSection>
 
@@ -308,7 +315,6 @@ export default async function Home() {
       {/* Sponsors */}
       <AnimatedSection>
         <section className="mx-auto max-w-5xl px-4 py-20">
-          <GoldenSponsor />
           <h2 className="mb-12 text-center font-heading text-3xl uppercase text-white/30">
             Пријатели на клубот
           </h2>

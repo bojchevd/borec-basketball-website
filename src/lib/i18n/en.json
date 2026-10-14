@@ -12,7 +12,7 @@
   },
   "home": {
     "established": "Est. 2009 · Veles",
-    "league": "First League · Group B · Season 2026/27",
+    "league": "First League · Group A · Season 2026/27",
     "schedule": "Schedule",
     "roster": "Roster",
     "nextGame": "Next Game",
@@ -97,8 +97,20 @@
     "emailLabel": "Email",
     "socialLabel": "Social",
     "form": {
+      "typePerson": "Individual",
+      "typeBusiness": "Business",
       "name": "Name",
       "namePlaceholder": "Your name",
+      "company": "Company name",
+      "companyPlaceholder": "Your company",
+      "topic": "Topic",
+      "topics": {
+        "sponsorship": "Sponsorship",
+        "donation": "Donation",
+        "advertising": "Advertising",
+        "event": "Event / Partnership",
+        "other": "Other"
+      },
       "email": "Email",
       "emailPlaceholder": "your@email.com",
       "message": "Message",
