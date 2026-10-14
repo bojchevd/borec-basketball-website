@@ -54,13 +54,31 @@ export const game = defineType({
       name: "result",
       title: "Result",
       type: "string",
-      description: 'Score after game, e.g. "84-72"',
+      description: 'Final score, HOME team first, e.g. "84-72"',
+      validation: (rule) =>
+        rule.custom((result) => {
+          if (!result) return true;
+          return /^\d{1,3}-\d{1,3}$/.test(result) || 'Use the format "84-72" (home team first)';
+        }),
     }),
     defineField({
       name: "isWin",
       title: "Win?",
       type: "boolean",
-      description: "Did Borec win this game?",
+      description: "Did Borec win this game? Required once a result is entered.",
+      validation: (rule) =>
+        rule.custom((isWin, context) => {
+          const { result, homeAway } = (context.document ?? {}) as { result?: string; homeAway?: string };
+          if (!result) return true;
+          if (typeof isWin !== "boolean") return "Set Win? on or off — the homepage record only counts games where it is set";
+          const [home, away] = result.split("-").map(Number);
+          if (Number.isNaN(home) || Number.isNaN(away) || !homeAway) return true;
+          const borecWon = homeAway === "home" ? home > away : away > home;
+          return borecWon === isWin || {
+            message: `The score (home team first) says Borec ${borecWon ? "won" : "lost"} — check Win? or the score`,
+            level: "warning",
+          };
+        }),
     }),
     defineField({
       name: "youtubeUrl",
