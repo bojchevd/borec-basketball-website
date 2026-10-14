@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/animated-section";
+import { TrainingHalls } from "@/components/training-halls";
 import { LightboxImage } from "@/components/lightbox";
 import { MinibasketSignupForm } from "@/components/minibasket-signup-form";
 
@@ -9,7 +10,7 @@ import { MinibasketSignupForm } from "@/components/minibasket-signup-form";
 export const metadata: Metadata = {
   title: "Минибаскет | Борец Баскет",
   description:
-    "Борец Минибаскет — кошарка за деца од 5–12 години во Велес, Македонија. Секој вторник и четврток во Сала Васил Главинов.",
+    "Борец Минибаскет — кошарка за деца од 5–12 години во Велес, Македонија. Тренинзи во ООУ „Васил Главинов“ (вторник и четврток) и СОУ Гимназија „Кочо Рацин“ (среда и петок).",
 };
 
 const benefits = [
@@ -89,7 +90,7 @@ export default function МинибаскетPage() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {/* Main message */}
-            <div className="rounded-lg border border-brand-gold/20 bg-brand-gold/5 p-6 lg:col-span-2">
+            <div className="rounded-lg border border-brand-gold/20 bg-brand-gold/5 p-6 md:col-span-2 lg:col-span-3">
               <p className="text-lg leading-relaxed text-white/80">
                 Ако сакаш преку забава и игра со врсниците да ги научиш основите
                 на кошаркарската игра, те чекаме на упис во новата сезона!
@@ -99,34 +100,16 @@ export default function МинибаскетPage() {
                   Охрабрете се да дојдете на пробен тренинг, истиот е бесплатен!
                 </p>
               </div>
-            </div>
-
-            {/* When & where */}
-            <div className="rounded-lg border border-white/10 bg-white/5 p-6">
-              <p className="mb-1 font-body text-xs uppercase tracking-widest text-brand-gold">
-                Кога и каде?
-              </p>
-              <p className="text-sm leading-relaxed text-white/60">
-                Уписот ќе се врши за време на тренинзите во спортската сала во
-                ООУ „Васил Главинов" — секој вторник и четврток од 20:00–21:00ч.
-                Групите ќе се формираат и комплетираат во текот на месец септември.
+              <p className="mt-4 text-sm text-white/60">
+                Уписот се врши за време на тренинзите, во двете сали.
               </p>
             </div>
 
-            {/* New location */}
-            <div className="rounded-lg border border-brand-gold/20 bg-brand-gold/5 p-6">
-              <p className="mb-1 font-body text-xs uppercase tracking-widest text-brand-gold">
-                Нови термини
-              </p>
-              <p className="text-sm leading-relaxed text-white/60">
-                СУПЕР информација за сите Вас, особено за сите деца на кои салата
-                им е подалеку — наскоро започнуваме со тренинзи и во СОУ Гимназија
-                „Кочо Рацин"!
-              </p>
-            </div>
+            {/* Training halls & times */}
+            <TrainingHalls className="md:col-span-2 lg:col-span-3" />
 
             {/* Contact */}
-            <div className="rounded-lg border border-white/10 bg-white/5 p-6 lg:col-span-3">
+            <div className="rounded-lg border border-white/10 bg-white/5 p-6 md:col-span-2 lg:col-span-3">
               <p className="mb-3 font-body text-xs uppercase tracking-widest text-brand-gold">
                 Контакт и инфо
               </p>
@@ -229,7 +212,7 @@ export default function МинибаскетPage() {
 
       {/* ─── Signup Form ─── */}
       <AnimatedSection delay={0.1}>
-        <section className="mx-auto max-w-7xl px-4 py-20 border-t border-white/10">
+        <section id="prijava" className="mx-auto max-w-7xl scroll-mt-16 px-4 py-20 border-t border-white/10">
           <div className="mx-auto max-w-3xl rounded-lg border border-white/10 bg-white/5 p-6 md:p-10">
             <h3 className="mb-6 text-center font-heading text-2xl uppercase text-white">
               Формулар за <span className="text-brand-gold">пријава</span>
@@ -361,13 +344,13 @@ export default function МинибаскетPage() {
               Спремни сте?
             </h2>
             <p className="mx-auto mt-4 max-w-md text-white/60 leading-relaxed">
-              Секој вторник и четврток, Сала Васил Главинов. Контактирајте нè и
-              ние ќе се погрижиме за останатото.
+              Четири термини неделно, во две сали низ Велес. Пополнете ја
+              пријавата и ние ќе се погрижиме за останатото.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center rounded-md bg-brand-red px-4 py-2 text-sm font-medium text-white hover:bg-brand-red/80 font-body">
-                Контактирајте нè
-              </Link>
+              <a href="#prijava" className="inline-flex items-center justify-center rounded-md bg-brand-red px-4 py-2 text-sm font-medium text-white hover:bg-brand-red/80 font-body">
+                Пријави се
+              </a>
               <Link href="/academy" className="inline-flex items-center justify-center rounded-md border border-white/30 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 font-body">
                 Погледни Академија →
               </Link>

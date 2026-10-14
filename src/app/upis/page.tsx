@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/animated-section";
+import { TrainingHalls } from "@/components/training-halls";
 import { LightboxImage } from "@/components/lightbox";
 import { UpisLeadForm } from "@/components/upis-lead-form";
 
@@ -131,32 +132,10 @@ export default function UpisPage() {
       {/* ─── Info Cards ─── */}
       <AnimatedSection delay={0.05}>
         <section className="mx-auto max-w-5xl px-4 pb-20">
-          <div className="grid gap-4 sm:grid-cols-2">
-            {/* When & where */}
-            <div className="rounded-lg border border-white/10 bg-white/5 p-5">
-              <p className="mb-1 font-body text-xs uppercase tracking-widest text-brand-gold">
-                Кога и каде?
-              </p>
-              <p className="text-sm leading-relaxed text-white/60">
-                Уписот ќе се врши за време на тренинзите во спортската сала во
-                ООУ „Васил Главинов" — секој вторник и четврток од 20:00–21:00ч.
-                Групите ќе се формираат и комплетираат во текот на месец
-                септември.
-              </p>
-            </div>
-
-            {/* New location */}
-            <div className="rounded-lg border border-brand-gold/20 bg-brand-gold/5 p-5">
-              <p className="mb-1 font-body text-xs uppercase tracking-widest text-brand-gold">
-                Нови термини
-              </p>
-              <p className="text-sm leading-relaxed text-white/60">
-                СУПЕР информација за сите Вас, особено за сите деца на кои салата
-                им е подалеку — наскоро започнуваме со тренинзи и во СОУ
-                Гимназија „Кочо Рацин"!
-              </p>
-            </div>
-          </div>
+          <p className="mb-4 text-center text-sm text-white/60">
+            Уписот се врши за време на тренинзите, во двете сали.
+          </p>
+          <TrainingHalls />
 
           {/* Coach contacts */}
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
