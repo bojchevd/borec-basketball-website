@@ -3,6 +3,7 @@ import type { Season } from "./types";
 export const season: Season = {
   slug: "2025-26",
   label: "2025/26",
+  startDate: "2025-08-01",
   roster: [
     // Foreign players
     { name: "Zion Timothy James Young", number: 0, position: "Shooting Guard", photo: "/players/placeholder.png" },

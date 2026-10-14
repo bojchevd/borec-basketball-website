@@ -20,10 +20,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(post.publishedAt),
   }));
 
-  const rosterArchivePages = pastSeasons.map((s) => ({
-    url: `${BASE_URL}/roster/${s.slug}`,
-    lastModified: new Date(),
-  }));
+  const seasonArchivePages = pastSeasons.flatMap((s) =>
+    ["roster", "schedule"].map((section) => ({
+      url: `${BASE_URL}/${section}/${s.slug}`,
+      lastModified: new Date(),
+    })),
+  );
 
-  return [...staticPages, ...postPages, ...rosterArchivePages];
+  return [...staticPages, ...postPages, ...seasonArchivePages];
 }

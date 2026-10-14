@@ -3,6 +3,7 @@ import type { Season } from "./types";
 export const season: Season = {
   slug: "2026-27",
   label: "2026/27",
+  startDate: "2026-08-01",
   roster: [
     { name: "Иван Крстески", photo: "/players/placeholder.png" },
     { name: "Стефан Сапроновски", photo: "/players/placeholder.png" },

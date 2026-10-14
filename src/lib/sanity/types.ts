@@ -13,6 +13,10 @@ export interface Post {
 export interface Game {
   _id: string;
   date: string;
+  /** Only the date is known; don't show the time */
+  timeTbd?: boolean;
+  /** League round (коло) */
+  round?: number;
   opponent: string;
   homeAway: "home" | "away";
   location: string;

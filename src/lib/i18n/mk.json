@@ -16,9 +16,11 @@
     "schedule": "Распоред",
     "roster": "Состав",
     "nextGame": "Следен натпревар",
+    "lastGame": "Последен натпревар",
     "fullSchedule": "Целосен распоред",
     "wins": "Победи",
     "loss": "Порази",
+    "position": "Позиција",
     "upcomingGames": "Следни",
     "upcomingGamesAccent": "Натпревари",
     "latestNews": "Последни",
@@ -36,7 +38,8 @@
     "title": "Распоред",
     "upcoming": "Следни натпревари",
     "results": "Резултати",
-    "noUpcoming": "Нема закажани натпревари."
+    "noUpcoming": "Нема закажани натпревари.",
+    "pastSeason": "Архива — резултати од сезоната"
   },
   "news": {
     "title": "Вести",
@@ -137,7 +140,9 @@
     "home": "ДОМА",
     "away": "ГОСТИ",
     "win": "ПОБЕДА",
-    "loss": "ПОРАЗ"
+    "loss": "ПОРАЗ",
+    "timeTbd": "TBD",
+    "round": "Коло"
   },
   "marquee1": "БОРЕЦ БАСКЕТ · ВЕЛЕС · BOREC BASKETBALL",
   "marquee2": "АКАДЕМИЈА · МИНИБАСКЕТ · ПРИКЛУЧИ СЕ"

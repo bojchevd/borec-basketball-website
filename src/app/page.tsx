@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { client } from "@/lib/sanity/client";
-import { LATEST_POSTS_QUERY, NEXT_GAMES_QUERY } from "@/lib/sanity/queries";
+import { LATEST_POSTS_QUERY, NEXT_GAMES_QUERY, LAST_RESULT_QUERY, SEASON_RECORD_QUERY } from "@/lib/sanity/queries";
 import type { Post, Game } from "@/lib/sanity/types";
 import { GameCard } from "@/components/game-card";
 import { FriendsMarquee } from "@/components/friends-marquee";
 import { GoldenSponsor } from "@/components/golden-sponsor";
+import { HeroGameCard, LastResultStrip } from "@/components/hero-game-card";
+import { currentSeason } from "@/data/rosters";
 import { Marquee } from "@/components/marquee";
 import { AnimatedSection } from "@/components/animated-section";
 import { NewsCard } from "@/components/news-card";
@@ -90,6 +92,18 @@ async function fetchData() {
   return { posts: MOCK_POSTS as Post[], games: MOCK_GAMES };
 }
 
+async function fetchSeasonResults() {
+  try {
+    const [lastGame, record] = await Promise.all([
+      client.fetch<Game | null>(LAST_RESULT_QUERY),
+      client.fetch<{ wins: number; losses: number }>(SEASON_RECORD_QUERY, { seasonStart: currentSeason.startDate }),
+    ]);
+    return { lastGame, record };
+  } catch {
+    return { lastGame: null, record: null };
+  }
+}
+
 // Mock-safe news card (doesn't need Sanity image URL builder)
 function MockNewsCard({ post }: { post: Post & { mockImage?: boolean } }) {
   return (
@@ -118,7 +132,7 @@ function MockNewsCard({ post }: { post: Post & { mockImage?: boolean } }) {
 
 export default async function Home() {
   const t = getTranslations("mk");
-  const { posts, games } = await fetchData();
+  const [{ posts, games }, { lastGame, record }] = await Promise.all([fetchData(), fetchSeasonResults()]);
   const nextGame = games[0];
 
   return (
@@ -160,71 +174,27 @@ export default async function Home() {
               </div>
             </div>
 
-            {/* Right — next game card */}
+            {/* Right — next game, or last result when nothing is scheduled */}
             <div className="flex flex-col justify-center">
-              {nextGame && (
-                <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-sm">
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
-                    {t.home.nextGame}
-                  </span>
-
-                  <div className="mt-6 flex items-center gap-6">
-                    <div>
-                      <div className="font-heading text-6xl leading-none text-white md:text-7xl">
-                        {new Date(nextGame.date).getDate()}
-                      </div>
-                      <div className="mt-1 text-xs font-semibold uppercase tracking-wider text-white/40">
-                        {new Date(nextGame.date)
-                          .toLocaleDateString("en-US", { month: "short" })
-                          .toUpperCase()}
-                      </div>
-                    </div>
-                    <div className="h-16 w-px bg-white/10" />
-                    <div>
-                      <div className="text-xl font-semibold text-white">
-                        {nextGame.homeAway === "home" ? "vs" : "@"}{" "}
-                        {nextGame.opponent}
-                      </div>
-                      <div className="mt-1 text-sm text-white/40">
-                        {nextGame.location}
-                      </div>
-                      <div className="mt-2 inline-block rounded-full bg-brand-red/10 px-3 py-1 text-xs font-semibold uppercase text-brand-red">
-                        {nextGame.homeAway}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 flex items-center gap-3">
-                    <Link href="/schedule" className="inline-flex items-center justify-center rounded-md border border-white/10 px-4 py-2 text-sm font-medium text-white/60 hover:bg-white/5 font-body">
-                      {t.home.fullSchedule} →
-                    </Link>
-                    {nextGame.youtubeUrl && (
-                      <a
-                        href={nextGame.youtubeUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Гледај на YouTube"
-                        className="inline-flex items-center justify-center rounded-md bg-brand-red p-2.5 text-white transition-opacity hover:opacity-80"
-                      >
-                        <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
-                          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                        </svg>
-                      </a>
-                    )}
-                  </div>
-                </div>
+              {nextGame ? (
+                <>
+                  <HeroGameCard game={nextGame} variant="next" />
+                  {lastGame && <LastResultStrip game={lastGame} />}
+                </>
+              ) : (
+                lastGame && <HeroGameCard game={lastGame} variant="last" />
               )}
 
               {/* Season stats teaser */}
               <div className="mt-4 grid grid-cols-3 gap-3">
                 <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 text-center">
-                  <div className="font-heading text-2xl text-brand-red">1</div>
+                  <div className="font-heading text-2xl text-brand-red">{record?.wins ?? "–"}</div>
                   <div className="mt-1 text-[10px] uppercase tracking-wider text-white/30">
                     {t.home.wins}
                   </div>
                 </div>
                 <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 text-center">
-                  <div className="font-heading text-2xl text-white">0</div>
+                  <div className="font-heading text-2xl text-white">{record?.losses ?? "–"}</div>
                   <div className="mt-1 text-[10px] uppercase tracking-wider text-white/30">
                     {t.home.loss}
                   </div>
@@ -232,7 +202,7 @@ export default async function Home() {
                 <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 text-center">
                   <div className="font-heading text-2xl text-brand-gold">3</div>
                   <div className="mt-1 text-[10px] uppercase tracking-wider text-white/30">
-                    Позиција
+                    {t.home.position}
                   </div>
                 </div>
               </div>

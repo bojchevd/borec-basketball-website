@@ -12,6 +12,20 @@ export const game = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "timeTbd",
+      title: "Time TBD",
+      type: "boolean",
+      description: "Tick while only the date is known — the site shows the date without a time",
+      initialValue: false,
+    }),
+    defineField({
+      name: "round",
+      title: "Round",
+      type: "number",
+      description: "League round (коло), e.g. 3",
+      validation: (rule) => rule.integer().positive(),
+    }),
+    defineField({
       name: "opponent",
       title: "Opponent",
       type: "string",

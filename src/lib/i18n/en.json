@@ -16,9 +16,11 @@
     "schedule": "Schedule",
     "roster": "Roster",
     "nextGame": "Next Game",
+    "lastGame": "Last game",
     "fullSchedule": "Full Schedule",
     "wins": "Wins",
     "loss": "Loss",
+    "position": "Position",
     "upcomingGames": "Upcoming",
     "upcomingGamesAccent": "Games",
     "latestNews": "Latest",
@@ -36,7 +38,8 @@
     "title": "Schedule",
     "upcoming": "Upcoming Games",
     "results": "Results",
-    "noUpcoming": "No upcoming games scheduled."
+    "noUpcoming": "No upcoming games scheduled.",
+    "pastSeason": "Archive — results from the season"
   },
   "news": {
     "title": "News",
@@ -137,7 +140,9 @@
     "home": "HOME",
     "away": "AWAY",
     "win": "WIN",
-    "loss": "LOSS"
+    "loss": "LOSS",
+    "timeTbd": "TBD",
+    "round": "Round"
   },
   "marquee1": "BOREC BASKETBALL · VELES · БОРЕЦ БАСКЕТ",
   "marquee2": "ACADEMY · MINIBASKET · JOIN US"

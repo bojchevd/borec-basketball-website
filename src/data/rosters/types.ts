@@ -29,6 +29,8 @@ export interface Season {
   slug: string;
   /** Display label, e.g. "2025/26" */
   label: string;
+  /** First day of the season (YYYY-MM-DD); games from this date count toward the homepage record */
+  startDate: string;
   roster: Player[];
   coachingStaff: Staff[];
   youthRosters: YouthCategory[];

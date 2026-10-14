@@ -13,3 +13,9 @@ export const pastSeasons = seasons.slice(1);
 export function getSeason(slug: string): Season | undefined {
   return seasons.find((s) => s.slug === slug);
 }
+
+/** Date range for a season's games: from its start date until the next season starts. */
+export function getSeasonRange(season: Season) {
+  const newer = seasons[seasons.indexOf(season) - 1];
+  return { seasonStart: season.startDate, seasonEnd: newer?.startDate ?? "9999-12-31" };
+}

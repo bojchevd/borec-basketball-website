@@ -21,7 +21,7 @@ export function GameCard({ game }: { game: Game }) {
             {game.homeAway === "home" ? t.game.home : t.game.away}
           </Badge>
         </div>
-        <div className="mt-1 text-sm text-white/50">{game.location} · {weekday} {time}</div>
+        <div className="mt-1 text-sm text-white/50">{game.round && `${t.game.round} ${game.round} · `}{game.location} · {weekday} {game.timeTbd ? `· ${t.game.timeTbd}` : time}</div>
       </div>
       {isPast && game.result && (
         <div className="text-right">
