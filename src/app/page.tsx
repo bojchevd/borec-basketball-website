@@ -108,7 +108,7 @@ export default async function Home() {
                   </div>
                 </div>
                 <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 text-center">
-                  <div className="font-heading text-2xl text-brand-gold">3</div>
+                  <div className="font-heading text-2xl text-brand-gold">4</div>
                   <div className="mt-1 text-[10px] uppercase tracking-wider text-white/30">
                     {t.home.position}
                   </div>
