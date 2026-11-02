@@ -26,6 +26,7 @@ export const season: Season = {
     { name: "Сашко Ристов", role: "Assistant Coach" },
     { name: "Зоран Кимов", role: "Representative" },
     { name: "Кокан Темелковски", role: "Technical Manager" },
+    { name: "Донче Бојчев", role: "Digital PR Coordinator" },
   ],
   youthRosters: [
     {
